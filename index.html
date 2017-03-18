@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+  <link type="text/css" rel="stylesheet" href="styles/home.css"/>
+
+  <title>taya.reshetnik</title>
+
+  <script type="text/javascript" src="scripts/jquery.min.js"></script>
+  <script type="text/javascript">   
+
+function getImageGroup( image ) {
+      // separating classes
+      var classnames = image.attr( 'class' );
+      var groupname = classnames.split( 'images ' ).join( '' );
+
+      if ( groupname.indexOf( 'box' ) != -1 ) {
+        groupname = groupname.split( 'box ' ).join( '' );
+        groupname = groupname.split( 'small ' ).join( '' );
+        groupname = groupname.split( 'portrait ' ).join( '' );
+      }
+
+      if ( groupname == 'images' ||  groupname == 'box' 
+        || groupname == 'small' || groupname == 'portrait' ) return false;
+      else return $( 'div.box.' + groupname 
+                 + ', div.line.' + groupname
+                 + ', div.images.' + groupname 
+                 + ', div.text.' + groupname );
+    }
+     //highlighting sequences
+    function highlightImageGroup( ) {
+      var image = $( this );
+      var imagegroup = getImageGroup( image );
+
+      if ( imagegroup !== false ) {
+        $( 'div.line, div.box, div.images, div.text' ).not( imagegroup )
+                                            .addClass( 'blended' );
+        imagegroup.addClass( 'rollovered' );
+      }
+    }
+    function unhighlightImageGroup( ) {
+      $( '.blended' ).removeClass( 'blended' );
+      $( '.rollovered' ).removeClass( 'rollovered' );
+    }
+
+    function initPage( ) {
+        $( 'div.box, div.images, div.text' ).hover( highlightImageGroup,       // -> rollover
+                                          unhighlightImageGroup ); // -> rollout
+
+    }
+
+    $( document ).ready( initPage );
+</script>
+
+      <!-- slideshow  -->
+      <script>
+          $(window).load(function(){
+              var pages = $('#container_getgoing li'), current=0;
+              var currentPage,nextPage;
+              $('#container_getgoing .switch').click(function(){
+                currentPage= pages.eq(current);
+                if($(this).hasClass('.prevButton'))
+                {
+                  if (current <= 0)
+                    current=pages.length-1;
+                  else
+                    current=current-1;
+                }
+                else
+                {
+                  if (current >= pages.length-1)
+                    current=0;
+                  else
+                    current=current+1;
+                }
+                nextPage = pages.eq(current); 
+                currentPage.hide(); 
+                nextPage.show();    
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function(){
+              $("#getgoing, #boxgetgoing").click(function(){
+                console.log("this is happening");
+                  $("#container_getgoing") .show();
+              });
+              $(".exit").click(function(){
+                $("#container_getgoing") .hide();
+              });
+          });
+      </script>
+
+      <script>
+          $(window).load(function(){
+              var pages = $('#container_bur li'), current=0;
+              var currentPage,nextPage;
+              $('#container_bur .switch').click(function(){
+                currentPage= pages.eq(current);
+                if($(this).hasClass('.prevButton'))
+                {
+                  if (current <= 0)
+                    current=pages.length-1;
+                  else
+                    current=current-1;
+                }
+                else
+                {
+                  if (current >= pages.length-1)
+                    current=0;
+                  else
+                    current=current+1;
+                }
+                nextPage = pages.eq(current); 
+                currentPage.hide(); 
+                nextPage.show();    
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function(){
+              $("#bur1,#bur2,#bur3,#boxbur").click(function(){
+                console.log("this is happening");
+                  $("#container_bur") .show();
+              });
+              $(".exit").click(function(){
+                $("#container_bur") .hide();
+              });
+          });
+      </script>
+
+      <script>
+          $(window).load(function(){
+              var pages = $('#container_intim li'), current=0;
+              var currentPage,nextPage;
+              $('#container_intim .switch').click(function(){
+                currentPage= pages.eq(current);
+                if($(this).hasClass('.prevButton'))
+                {
+                  if (current <= 0)
+                    current=pages.length-1;
+                  else
+                    current=current-1;
+                }
+                else
+                {
+                  if (current >= pages.length-1)
+                    current=0;
+                  else
+                    current=current+1;
+                }
+                nextPage = pages.eq(current); 
+                currentPage.hide(); 
+                nextPage.show();    
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function(){
+              $("#intim1,#intim2, #boxintim").click(function(){
+                console.log("this is happening");
+                  $("#container_intim") .show();
+              });
+              $(".exit").click(function(){
+                $("#container_intim") .hide();
+              });
+          });
+      </script>
+
+      <script>
+          $(window).load(function(){
+              var pages = $('#container_fourth li'), current=0;
+              var currentPage,nextPage;
+              $('#container_fourth .switch').click(function(){
+                currentPage= pages.eq(current);
+                if($(this).hasClass('.prevButton'))
+                {
+                  if (current <= 0)
+                    current=pages.length-1;
+                  else
+                    current=current-1;
+                }
+                else
+                {
+                  if (current >= pages.length-1)
+                    current=0;
+                  else
+                    current=current+1;
+                }
+                nextPage = pages.eq(current); 
+                currentPage.hide(); 
+                nextPage.show();    
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function(){
+              $("#fourth1,#fourth2, #fourth3, #fourth4, #boxfourth").click(function(){
+                console.log("this is happening");
+                  $("#container_fourth") .show();
+              });
+              $(".exit").click(function(){
+                $("#container_fourth") .hide();
+              });
+          });
+      </script>
+
+      <script>
+          $(window).load(function(){
+              var pages = $('#container_insideout li'), current=0;
+              var currentPage,nextPage;
+              $('#container_insideout .switch').click(function(){
+                currentPage= pages.eq(current);
+                if($(this).hasClass('.prevButton'))
+                {
+                  if (current <= 0)
+                    current=pages.length-1;
+                  else
+                    current=current-1;
+                }
+                else
+                {
+                  if (current >= pages.length-1)
+                    current=0;
+                  else
+                    current=current+1;
+                }
+                nextPage = pages.eq(current); 
+                currentPage.hide(); 
+                nextPage.show();    
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function(){
+              $("#insideout1, #insideout2").click(function(){
+                console.log("this is happening");
+                  $("#container_insideout") .show();
+              });
+              $(".exit").click(function(){
+                $("#container_insideout") .hide();
+              });
+          });
+      </script>
+
+      <script>
+          $(window).load(function(){
+              var pages = $('#container_objects li'), current=0;
+              var currentPage,nextPage;
+              $('#container_objects .switch').click(function(){
+                currentPage= pages.eq(current);
+                if($(this).hasClass('.prevButton'))
+                {
+                  if (current <= 0)
+                    current=pages.length-1;
+                  else
+                    current=current-1;
+                }
+                else
+                {
+                  if (current >= pages.length-1)
+                    current=0;
+                  else
+                    current=current+1;
+                }
+                nextPage = pages.eq(current); 
+                currentPage.hide(); 
+                nextPage.show();    
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function(){
+              $("#objects1, #objects2, #objects3, #objects4, #boxobjects").click(function(){
+                console.log("this is happening");
+                  $("#container_objects") .show();
+              });
+              $(".exit").click(function(){
+                $("#container_objects") .hide();
+              });
+          });
+      </script>
+
+      <script>
+          $(window).load(function(){
+              var pages = $('#container_miscon li'), current=0;
+              var currentPage,nextPage;
+              $('#container_miscon .switch').click(function(){
+                currentPage= pages.eq(current);
+                if($(this).hasClass('.prevButton'))
+                {
+                  if (current <= 0)
+                    current=pages.length-1;
+                  else
+                    current=current-1;
+                }
+                else
+                {
+                  if (current >= pages.length-1)
+                    current=0;
+                  else
+                    current=current+1;
+                }
+                nextPage = pages.eq(current); 
+                currentPage.hide(); 
+                nextPage.show();    
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function(){
+              $("#miscon1, #miscon2, #miscon4, #miscon5, #boxmiscon").click(function(){
+                console.log("this is happening");
+                  $("#container_miscon") .show();
+              });
+              $(".exit").click(function(){
+                $("#container_miscon") .hide();
+              });
+          });
+      </script>
+
+      <script>
+          $(window).load(function(){
+              var pages = $('#container_jorplace li'), current=0;
+              var currentPage,nextPage;
+              $('#container_jorplace .switch').click(function(){
+                currentPage= pages.eq(current);
+                if($(this).hasClass('.prevButton'))
+                {
+                  if (current <= 0)
+                    current=pages.length-1;
+                  else
+                    current=current-1;
+                }
+                else
+                {
+                  if (current >= pages.length-1)
+                    current=0;
+                  else
+                    current=current+1;
+                }
+                nextPage = pages.eq(current); 
+                currentPage.hide(); 
+                nextPage.show();    
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function(){
+              $("#jorplace1, #jorplace2, #jorplace2, #boxjorplace").click(function(){
+                console.log("this is happening");
+                  $("#container_jorplace") .show();
+              });
+              $(".exit").click(function(){
+                $("#container_jorplace") .hide();
+              });
+          });
+      </script>
+
+      <script>
+          $(window).load(function(){
+              var pages = $('#container_practice li'), current=0;
+              var currentPage,nextPage;
+              $('#container_practice .switch').click(function(){
+                currentPage= pages.eq(current);
+                if($(this).hasClass('.prevButton'))
+                {
+                  if (current <= 0)
+                    current=pages.length-1;
+                  else
+                    current=current-1;
+                }
+                else
+                {
+                  if (current >= pages.length-1)
+                    current=0;
+                  else
+                    current=current+1;
+                }
+                nextPage = pages.eq(current); 
+                currentPage.hide(); 
+                nextPage.show();    
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function(){
+              $("#practice1, #practice2, #boxpractice").click(function(){
+                console.log("this is happening");
+                  $("#container_practice") .show();
+              });
+              $(".exit").click(function(){
+                $("#container_practice") .hide();
+              });
+          });
+      </script>   
+
+</head>
+
+<body>  
+<!-- vertical lines -->
+      <div class="line ver bur" style="top:12.3vw; left:35%; height:8vw"></div>
+      <div class="line ver bur" style="top:21vw; left:30%; height:5vw"></div>
+      <div class="line ver getgoing" style="top:21.3vw; left:8%; height:9vw"></div>
+      <div class="line ver intim" style="top:10vw; left:73%; height:9vw"></div>
+      <div class="line ver fourth" style="top:23.45vw; left:89%; height:13.6vw"></div>
+      <div class="line ver fourth" style="top:45.6vw; left:32.5%; height:3.4vw"></div>
+      <div class="line ver objects" style="top:61.5vw; left:57.5%; height:10vw"></div>
+      <div class="line ver insideout" style="top:53.5vw; left:7%; height:12.5vw"></div>
+      <div class="line ver what_i_said" style="top:76.1vw; left:45%; height:2vw"></div>
+      <div class="line ver what_i_said" style="top:80.3vw; left:38%; height:1.7vw"></div>
+      <div class="line ver what_i_said" style="top:84.3vw; left:45%; height:1.7vw"></div>
+      <div class="line ver what_i_said" style="top:88.3vw; left:38%; height:1.7vw"></div>
+      <div class="line ver objects" style="top:90.1vw; left:25%; height:5vw"></div>
+      <div class="line ver staging" style="top:110vw; left:90%; height:6vw"></div>
+
+<!-- horizontal lines -->
+      <div class="line hor bur" style="top:30vw; left:32.1%; width:13vw"></div>
+      <div class="line hor intim" style="top:12vw; left:70%; height:20vw"></div>
+      <div class="line hor fourth" style="top:42vw; left:40.1%; width:26.9vw"></div>
+      <div class="line hor objects" style="top:67vw; left:65%; width:7vw"></div>
+      <div class="line hor cmyk" style="top:10vw; left:65.1%; width:5.9vw"></div>
+      <div class="line hor objects" style="top:70vw; left:52.1%; width:5vw"></div>
+      <div class="line hor objects" style="top:85vw; left:70.2%; width:2vw"></div>
+
+<!-- boxes -->
+      <div class="box small getgoing" id="boxgetgoing" style="top:25vw; left:2%">GET GOING!</div>
+      <div class="box small bur" id="boxbur" style="top:13.5vw; left:27%">BUREAUCRACY COMPLEX</div>
+      <div class="box small intim" id="boxintim" style="top:4vw; left:70%">GLOBALIZING INTIMACY</div>
+      <div class="box small fourth" id="boxfourth" style="top:37vw; left:45%">FOURTH DIMENSION</div>
+      <div class="box small insideout" id="boxinsideout" style="top:56vw; left:2%">INSIDE/OUT booklet</div>
+      <div class="box small insideout" id="boxinsideout" style="top:88vw; left:2%">INSIDE/OUT book</div>
+      <div class="box small insideout" id="boxinsideout" style="top:120vw; left:30%">INSIDE/OUT installation</div>
+      <div class="box small objects" id="boxobjects" style="top:65vw; left:55%">52.083967, 4.239759</div>
+      <div class="box small miscon" id="miscon" style="top:97vw; left:60%">MISCONNECTION</div>
+      <div class="box small jorplace" id="boxjorplace" style="top:140vw; left:55%">POSTERS for Jorplace Hostel</div>
+      <div class="box small practice" id="boxpractice" style="top:140vw; left:4%">THE PRACTICE</div>
+
+
+      <!-- <div class="box portrait whatisaid" id="boxwhatisaid" style="top:130vw; left:50%">I WANT TO KNOW WHAT I SAID</div>
+      <div class="box small uncanny" id="uncanny" style="top:160vw; left:70%">UNCANNY</div>
+      <div class="box small enemy" id="enemy" style="top:180vw; left:2%">KEEP THEM CLOSE</div>
+      <div class="box small dr" id="dr" style="top:200vw; left:50%">DRAWING</div> -->
+ 
+<!-- text -->
+      <div class ="text getgoing" id= "text_getgoing">Get Going! or a Survival Guide for the Graphic Designer in the age of coming Insurrection. <br>As a result of investigating how the rebellious text, written by the anonymous group "Invisible Comittee", is connected to the future of Graphic Design. Designed with the open source program, using only open source typefaces and produced manualy. 
+      </div>
+      <div class ="text bur" id= "text_bur">We live under a system of bureaucratic principles which are extended to every aspect of our existence. What we call "globalization” has nothing to do with the effacement of borders and the free movement of people, products, and ideas, but rather trapping people behind national borders. This project is a model of the world's effective planetary-scale administrative bureaucratic system currently in place. 
+          <br>In collaboration with Rebecca Rui. 
+      </div>
+      <div class ="text intim" id ="text_intim">Internet, as a disembodied form of communication, often assumed to be impersonal and untrustworthy. “Globalising intimacy” is an installation, visualising how the absence of physical proximity creates intimacy. 
+        The installation includes 2 screens, placed in 2 different spots. Each of them shows the same message. However, you can only read the message how it is supposed to be if both you and the person in front of the other screen stands still. If one of you is moving the message is distorted. If one of you is absent, there's a piece of text missing.
+            <br>In collaboration with Dora Kerekes.
+            <br>With special thanks to Daniel Shiffman, Edwin Jakobs, Lizzie Malcolm, Boyd Rotgans, Gabor Kerekes.
+      </div>
+      <div class ="text fourth" id ="text_fourth">The interactive installation "Fourth Dimension" is an attampt to comprehence the idea of a 4-dimesional space. Combining 4 different media (visual projection, sound, touch and space) and influencing different sources of perception, the project works as a fluid constraction, reacting on touch, by changing visual and sound aspects. 
+        <br>Exhibition "Moving Cities, Moving Type". 
+        <br>14 December 2015.
+        <br>Fokker Terminal. Den Haag.
+      </div>
+      <div class ="text insideout" id ="text_insideout">
+        Text about the booklet. 
+        Part of installation and poetry
+
+        <br>in collaboration with Raphaël Maman.
+        <br>"Sexy Times exhibition".
+        <br>14-15 January 2017
+        <br>Sociëteit SEXYLAND. Amsterdam
+      </div>
+
+  <!-- images -->
+     <div class="images getgoing" id="getgoing"><img src="images/getgoing1.jpg"/></div>
+
+     <div class="images bur" id="bur1"><img src="images/bur1.png"/></div>
+     <div class="images bur" id="bur2"><img src="images/bur2.png"/></div>
+     <div class="images bur" id="bur3"><img src="images/bur3.png"/></div>
+
+     <div class="images intim" id="intim1"><img src="images/intimacy.gif"/></div>
+     <div class="images intim" id="intim2"><img src="images/intim2.jpg"/></div>
+
+     <div class="images fourth" id="fourth1"><img src="images/fourth_dim1.jpg"/></div>
+     <div class="images fourth" id="fourth2"><img src="images/fourth_dim2.gif"/></div>
+     <div class="images fourth" id="fourth3"><img src="images/fourth_dim4.jpg"/></div>
+     <div class="images fourth" id="fourth4"><img src="images/fourth_dim4.jpg"/></div>
+
+     <div class="images insideout" id="insideout1"><img src="images/insideout1.jpg"/></div>
+     <div class="images insideout" id="insideout2"><img src="images/insideout2.jpg"/></div>
+
+     <div class="images objects" id="objects1"><img src="images/objects.gif"/></div>
+     <div class="images objects" id="objects2"><img src="images/objects1.png"/></div>
+     <div class="images objects" id="objects3"><img src="images/objects2.jpg"/></div>
+     <div class="images objects" id="objects4"><img src="images/objects_expo1.jpg"/></div>
+
+     <div class="images miscon" id="miscon1"><img src="images/miscon1.jpg"/></div>
+     <div class="images miscon" id="miscon2"><img src="images/miscon2.jpg"/></div>
+     <div class="images miscon" id="miscon4"><img src="images/miscon4.jpg"/></div>
+     <div class="images miscon" id="miscon5"><img src="images/miscon_book2.jpg"/></div>
+
+     <div class="images jorplace" id="jorplace1"><img src="images/ha2.gif"/></div>
+     <div class="images jorplace" id="jorplace3"><img src="images/cdz.gif"/></div>
+
+     <div class="images practice" id="practice1"><img src="images/practice2.gif"/></div>
+     <div class="images practice" id="practice2"><img src="images/practice1.jpg"/></div>
+
+     <div class="images uncanny" id="uncanny1"><img src="images/uncanny1.gif"/></div>
+
+
+<!-- slideshow -->
+
+    <div id="container_getgoing">
+      <span class = "exit"></span>
+        <ul>
+          <li>
+            <img src="images/getgoing1.jpg">
+          </li>
+          <li>
+            <img src="images/getgoing2.1.jpg">
+          </li>
+          <li>
+            <img src="images/getgoing2.2.jpg">
+          </li>
+          <li>
+            <img src="images/getgoing3.jpg">
+          </li>
+          <li>
+            <img src="images/getgoing4.jpg">
+          </li>
+          <li>
+            <img src="images/getgoing5.jpg">
+          </li>
+          <li>
+            <img src="images/getgoing6.jpg">
+          </li>
+
+        </ul>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+
+      <div id="container_bur">
+        <span class = "exit"></span>
+        <ul>
+          <li><center>     
+              <video width="840" height="680" controls>
+                <source src="video/bur.mp4" type="video/mp4">
+              </video></center>
+          </li>
+              <li>
+                <img src="images/bur2.png">
+              </li>
+                 <li>
+                  <img src="images/bur3.png">
+                </li>
+        </ul>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+
+      <div id="container_intim">
+        <span class = "exit"></span>
+        <ul>
+          <li>
+            <img src="images/intimacy.gif">
+          </li>
+          <li>
+            <video width="840" height="680" controls>
+                <source src="video/intimacy.mov" type="video/mov">
+            </video>
+          </li>
+          <li>
+            <img src="images/intim2.jpg">
+          </li>
+          <li>
+            <img src="images/dora1.png">
+          </li>
+          <li>
+            <img src="images/dora2.png">
+          </li>
+          <li>
+            <img src="images/dora3.png">
+          </li>
+          <li>
+            <img src="images/dora4.png">
+          </li>
+          <li>
+            <img src="images/taya1.png">
+          </li>
+          <li>
+            <img src="images/taya2.png">
+          </li>
+        </ul>
+            <div class = "project_description">GLOBALIZING INTIMACY.</div>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+      <div id="container_fourth">
+        <span class = "exit"></span>
+        <ul>
+          <li>
+            <img src="images/fourth_dim1.jpg">
+          </li>
+          <li>
+            <img src="images/fourth_dim2.gif">
+          </li>
+          <li>
+            <img src="images/fourth_dim3.jpg">
+          </li>
+          <li>
+            <img src="images/fourth_dim4.jpg">
+          </li>
+        </ul>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+
+      <div id="container_insideout">
+        <span class = "exit"></span>
+        <ul>
+          <li>
+            <img src="images/insideout1.jpg">
+          </li>
+          <li>
+            <img src="images/insideout2.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.1.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.2.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.3.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.4.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.5.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.6.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.7.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.8.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.9.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.10.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.11.jpg">
+          </li>
+          <li>
+            <img src="images/insideout1.12.jpg">
+          </li>
+        </ul>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+
+      <div id="container_objects">
+        <span class = "exit"></span>
+        <ul>
+          <li>    
+<iframe class="video" src="https://www.youtube.com/embed/xBaLxR8RvOI" frameborder="0" allowfullscreen></iframe>          
+          </li>
+              <li>
+                <img src="images/objects.gif">
+              </li>
+                 <li>
+                  <img src="images/objects1.png">
+                 </li>
+                 <li>
+                  <img src="images/objects2.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo1.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo2.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo3.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo4.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo5.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo6.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo7.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo8.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo9.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo10.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_expo11.jpg">
+                 </li>
+        </ul>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+
+      <div id="container_miscon">
+        <span class = "exit"></span>
+        <ul>
+                <li>
+                  <img src="images/miscon1.jpg">
+                 </li>
+                 <li>
+                  <img src="images/miscon2.jpg">
+                 </li>
+                 <li>
+                  <img src="images/miscon4.jpg">
+                 </li>
+                 <li>
+                  <img src="images/miscon_book1.jpg">
+                 </li>
+                 <li>
+                  <img src="images/miscon_book2.jpg">
+                 </li>
+
+        </ul>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+
+      <div id="container_jorplace">
+        <span class = "exit"></span>
+        <ul>
+                <li>
+                  <img src="images/ha_comb1.jpg">
+                 </li>
+                 <li>
+                  <img src="images/ha_comb2.jpg">
+                 </li>
+                 <li>
+                  <img src="images/ha2.gif">
+                 </li>
+
+        </ul>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+
+      <div id="container_practice">
+        <span class = "exit"></span>
+        <ul>
+                <li>
+                  <img src="images/practice1.jpg">
+                 </li>
+                 <li>
+                  <img src="images/practice2.gif">
+                 </li>
+
+        </ul>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+
+<div class="header" id="name"><a href="index.html">taya reshetnik</a></div>
+
+</body>
+</html>
