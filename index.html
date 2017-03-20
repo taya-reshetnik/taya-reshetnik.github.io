@@ -101,6 +101,7 @@ function getImageGroup( image ) {
                 {
                   if (current <= 0)
                     current=pages.length-1;
+
                   else
                     current=current-1;
                 }
@@ -122,9 +123,21 @@ function getImageGroup( image ) {
               $("#bur1,#bur2,#bur3,#boxbur").click(function(){
                 console.log("this is happening");
                   $("#container_bur") .show();
+                  $(".li_video")[0].src += "&autoplay=1";
+                  $(this).unbind("click");
               });
               $(".exit").click(function(){
                 $("#container_bur") .hide();
+                  $('.li_video').each(function(){
+                    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                    console.log("it should stop");
+                  });
+              });
+              $(".switch").click(function(){
+                  $('.li_video').each(function(){
+                    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                    console.log("it should stop");
+                  });
               });
           });
       </script>
@@ -274,9 +287,21 @@ function getImageGroup( image ) {
               $("#objects1, #objects2, #objects3, #objects4, #boxobjects").click(function(){
                 console.log("this is happening");
                   $("#container_objects") .show();
+                  $(".li_video_video")[0].src += "&autoplay=1";
+                  $(this).unbind("click");
               });
               $(".exit").click(function(){
                 $("#container_objects") .hide();
+                  $('.li_video_video').each(function(){
+                    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                    console.log("it should stop");
+                  });
+              });
+              $(".switch").click(function(){
+                  $('.li_video_video').each(function(){
+                    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                    console.log("it should stop");
+                  });
               });
           });
       </script>
@@ -394,6 +419,20 @@ function getImageGroup( image ) {
               });
           });
       </script>
+      <!-- <script>
+         $("#playvideo").click(function(){
+          $(".li_video")[0].src += "&autoplay=1";
+          $(this).unbind("click");//or some other way to make sure that this only happens once
+         });
+      </script> -->
+      <!-- <script>
+        $('.exit').click(function(){
+          $('.li_video').each(function(){
+            this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+            console.log("it should stop");
+          });
+        });
+      </script> -->
 
 </head>
 
@@ -480,14 +519,14 @@ function getImageGroup( image ) {
 
      <div class="images fourth" id="fourth1"><img src="images/fourth_dim1.jpg"/></div>
      <div class="images fourth" id="fourth2"><img src="images/fourth_dim2.gif"/></div>
-     <div class="images fourth" id="fourth3"><img src="images/fourth_dim4.jpg"/></div>
+     <div class="images fourth" id="fourth3"><img src="images/fourth_dim3.jpg"/></div>
      <div class="images fourth" id="fourth4"><img src="images/fourth_dim4.jpg"/></div>
 
      <div class="images insideout" id="insideout1"><img src="images/insideout1.jpg"/></div>
      <div class="images insideout" id="insideout2"><img src="images/insideout2.jpg"/></div>
 
      <div class="images objects" id="objects1"><img src="images/objects.gif"/></div>
-     <div class="images objects" id="objects2"><img src="images/objects1.png"/></div>
+     <div class="images objects" id="objects2"><img src="images/objects1.jpg"/></div>
      <div class="images objects" id="objects3"><img src="images/objects2.jpg"/></div>
      <div class="images objects" id="objects4"><img src="images/objects_expo1.jpg"/></div>
 
@@ -510,8 +549,8 @@ function getImageGroup( image ) {
     <div id="container_getgoing">
       <span class = "exit"></span>
         <ul>
-          <li>
-            <img src="images/getgoing1.jpg">
+          <li >
+            <img class ="vertical" src="images/getgoing1.jpg">
           </li>
           <li>
             <img src="images/getgoing2.1.jpg">
@@ -541,7 +580,7 @@ function getImageGroup( image ) {
         <span class = "exit"></span>
         <ul>
             <li>
-              <iframe width="854" height="480" src="https://www.youtube.com/embed/55jV1h7qi0k" frameborder="0" allowfullscreen></iframe>
+              <iframe  class ="li_video" src="https://www.youtube.com/embed/55jV1h7qi0k?version=3&enablejsapi=1" frameborder="0" allowfullscreen="true" ></iframe>
             </li>
             <li>
               <img src="images/bur1.jpg">
@@ -572,22 +611,22 @@ function getImageGroup( image ) {
             <img src="images/intim2.jpg">
           </li>
           <li>
-            <img src="images/dora1.png">
+            <img src="images/dora1.jpg">
           </li>
           <li>
-            <img src="images/dora2.png">
+            <img src="images/dora2.jpg">
           </li>
           <li>
-            <img src="images/dora3.png">
+            <img src="images/dora3.jpg">
           </li>
           <li>
-            <img src="images/dora4.png">
+            <img src="images/dora4.jpg">
           </li>
           <li>
-            <img src="images/taya1.png">
+            <img src="images/taya1.jpg">
           </li>
           <li>
-            <img src="images/taya2.png">
+            <img src="images/taya2.jpg">
           </li>
         </ul>
             <div class = "project_description">GLOBALIZING INTIMACY.</div>
@@ -668,13 +707,19 @@ function getImageGroup( image ) {
         <span class = "exit"></span>
         <ul>
           <li>
-<iframe class="video" src="https://www.youtube.com/embed/xBaLxR8RvOI" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe class="li_video" src="https://www.youtube.com/embed/xBaLxR8RvOI" frameborder="0" allowfullscreen></iframe> -->
+<!-- <object class="li_video" >
+    <param name="movie" value="https://www.youtube.com/embed/xBaLxR8RvOI?autoplay=1&showinfo=0&controls=0version=3&enablejsapi=1" width="100%" height="100%" >
+    <param name="allowScriptAccess" value="always">
+    <embed class="li_video_video" src="https://www.youtube.com/embed/xBaLxR8RvOI?autoplay=1&showinfo=0&controls=0version=3&enablejsapi=1" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="100%" height="600px" >
+</object> -->
+              <iframe  class ="li_video_video" src="https://www.youtube.com/embed/xBaLxR8RvOI?&showinfo=0&controls=0version=3&enablejsapi=1" frameborder="0" allowfullscreen="true" ></iframe>
           </li>
               <li>
                 <img src="images/objects.gif">
               </li>
                  <li>
-                  <img src="images/objects1.png">
+                  <img src="images/objects1.jpg">
                  </li>
                  <li>
                   <img src="images/objects2.jpg">
@@ -721,7 +766,7 @@ function getImageGroup( image ) {
         <span class = "exit"></span>
         <ul>
                 <li>
-                  <img src="images/miscon1.jpg">
+                  <img class ="vertical" src="images/miscon1.jpg">
                  </li>
                  <li>
                   <img src="images/miscon2.jpg">
