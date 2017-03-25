@@ -208,7 +208,7 @@ function getImageGroup( image ) {
       </script>
       <script>
           $(document).ready(function(){
-              $("#fourth1,#fourth2, #fourth3, #fourth4, #boxfourth").click(function(){
+              $("#fourth1, #fourth2, #fourth3, #fourth4, #boxfourth").click(function(){
                 console.log("this is happening");
                   $("#container_fourth") .show();
               });
@@ -246,12 +246,50 @@ function getImageGroup( image ) {
       </script>
       <script>
           $(document).ready(function(){
-              $("#insideout1, #insideout2").click(function(){
+              $("#insideout1, #insideout2, #boxinsideout1").click(function(){
                 console.log("this is happening");
                   $("#container_insideout") .show();
               });
               $(".exit").click(function(){
                 $("#container_insideout") .hide();
+              });
+          });
+      </script>
+
+      <script>
+          $(window).load(function(){
+              var pages = $('#container_poem li'), current=0;
+              var currentPage,nextPage;
+              $('#container_poem .switch').click(function(){
+                currentPage= pages.eq(current);
+                if($(this).hasClass('.prevButton'))
+                {
+                  if (current <= 0)
+                    current=pages.length-1;
+                  else
+                    current=current-1;
+                }
+                else
+                {
+                  if (current >= pages.length-1)
+                    current=0;
+                  else
+                    current=current+1;
+                }
+                nextPage = pages.eq(current);
+                currentPage.hide();
+                nextPage.show();
+              });
+          });
+      </script>
+      <script>
+          $(document).ready(function(){
+              $("#poem1, #poem2, #boxpoem").click(function(){
+                console.log("this is happening");
+                  $("#container_poem") .show();
+              });
+              $(".exit").click(function(){
+                $("#container_poem") .hide();
               });
           });
       </script>
@@ -372,7 +410,7 @@ function getImageGroup( image ) {
       </script>
       <script>
           $(document).ready(function(){
-              $("#jorplace1, #jorplace2, #jorplace2, #boxjorplace").click(function(){
+              $("#jorplace1, #jorplace2, #jorplace3, #boxjorplace").click(function(){
                 console.log("this is happening");
                   $("#container_jorplace") .show();
               });
@@ -413,31 +451,82 @@ function getImageGroup( image ) {
               $("#practice1, #practice2, #boxpractice").click(function(){
                 console.log("this is happening");
                   $("#container_practice") .show();
+                  $(".li_video_practice")[0].src += "&autoplay=1";
+                  $(this).unbind("click");
               });
               $(".exit").click(function(){
                 $("#container_practice") .hide();
+                  $('.li_video_practice').each(function(){
+                    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                    console.log("it should stop");
+                  });
+              });
+              $(".switch").click(function(){
+                  $('.li_video_practice').each(function(){
+                    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                    console.log("it should stop");
+                  });
               });
           });
-      </script>
-      <!-- <script>
-         $("#playvideo").click(function(){
-          $(".li_video")[0].src += "&autoplay=1";
-          $(this).unbind("click");//or some other way to make sure that this only happens once
-         });
-      </script> -->
-      <!-- <script>
-        $('.exit').click(function(){
-          $('.li_video').each(function(){
-            this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-            console.log("it should stop");
-          });
+
+    </script>
+
+    <script>
+        $(window).load(function(){
+            var pages = $('#container_uncanny li'), current=0;
+            var currentPage,nextPage;
+            $('#container_uncanny .switch').click(function(){
+              currentPage= pages.eq(current);
+              if($(this).hasClass('.prevButton'))
+              {
+                if (current <= 0)
+                  current=pages.length-1;
+                else
+                  current=current-1;
+              }
+              else
+              {
+                if (current >= pages.length-1)
+                  current=0;
+                else
+                  current=current+1;
+              }
+              nextPage = pages.eq(current);
+              currentPage.hide();
+              nextPage.show();
+            });
         });
-      </script> -->
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#uncanny1, #boxuncanny").click(function(){
+              console.log("this is happening");
+                $("#container_uncanny") .show();
+                $(".li_video_uncanny")[0].src += "&autoplay=1";
+                $(this).unbind("click");
+            });
+            $(".exit").click(function(){
+              $("#container_uncanny") .hide();
+                $('.li_video_uncanny').each(function(){
+                  this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                  console.log("it should stop");
+                });
+            });
+            $(".switch").click(function(){
+                $('.li_video_uncanny').each(function(){
+                  this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                  console.log("it should stop");
+                });
+            });
+        });
+
+  </script>
 
 </head>
 
 <body>
 <!-- vertical lines -->
+<div id="umri" style="z-index:-1; position:fixed; background-color:white; width:100%;height:100%"></div>
       <div class="line ver bur" style="top:12.3vw; left:35%; height:8vw"></div>
       <div class="line ver bur" style="top:21vw; left:30%; height:5vw"></div>
       <div class="line ver getgoing" style="top:21.3vw; left:8%; height:9vw"></div>
@@ -445,67 +534,197 @@ function getImageGroup( image ) {
       <div class="line ver fourth" style="top:23.45vw; left:89%; height:13.6vw"></div>
       <div class="line ver fourth" style="top:45.6vw; left:32.5%; height:3.4vw"></div>
       <div class="line ver objects" style="top:61.5vw; left:57.5%; height:10vw"></div>
-      <div class="line ver insideout" style="top:53.5vw; left:7%; height:12.5vw"></div>
-      <div class="line ver what_i_said" style="top:76.1vw; left:45%; height:2vw"></div>
-      <div class="line ver what_i_said" style="top:80.3vw; left:38%; height:1.7vw"></div>
-      <div class="line ver what_i_said" style="top:84.3vw; left:45%; height:1.7vw"></div>
-      <div class="line ver what_i_said" style="top:88.3vw; left:38%; height:1.7vw"></div>
-      <div class="line ver objects" style="top:90.1vw; left:25%; height:5vw"></div>
-      <div class="line ver staging" style="top:110vw; left:90%; height:6vw"></div>
+      <div class="line ver insideout poem" style="top:53.5vw; left:7%; height:12.5vw"></div>
+      <div class="line ver insideout poem" style="top:86.1vw; left:15%; height:5vw"></div>
+      <div class="line ver insideout poem" style="top:86.1vw; left:30%; height:6vw"></div>
+      <div class="line ver insideout poem" style="top:106.9vw; left:30%; height:2.2vw"></div>
+      <div class="line ver miscon" style="top:109.3vw; left:85%; height:2.8vw"></div>
+      <div class="line ver miscon" style="top:105vw; left:62%; height:3vw"></div>
+      <div class="line ver miscon" style="top:120.2vw; left:58%; height:2.9vw"></div>
+      <div class="line ver jorplace" style="top:150vw; left:58%; height:10vw"></div>
+      <div class="line ver practice" style="top:140vw; left:35%; height:7vw"></div>
 
 <!-- horizontal lines -->
       <div class="line hor bur" style="top:30vw; left:32.1%; width:13vw"></div>
-      <div class="line hor intim" style="top:12vw; left:70%; height:20vw"></div>
+      <div class="line hor intim" style="top:10vw; left:65%; width:10vw"></div>
       <div class="line hor fourth" style="top:42vw; left:40.1%; width:26.9vw"></div>
       <div class="line hor objects" style="top:67vw; left:65%; width:7vw"></div>
-      <div class="line hor cmyk" style="top:10vw; left:65.1%; width:5.9vw"></div>
       <div class="line hor objects" style="top:70vw; left:52.1%; width:5vw"></div>
       <div class="line hor objects" style="top:85vw; left:70.2%; width:2vw"></div>
+      <div class="line hor miscon" style="top:100vw; left:70%; width:7.9vw"></div>
+      <div class="line hor jorplace" style="top:149.5vw; left:65%; width:7.9vw"></div>
+      <div class="line hor practice" style="top:140vw; left:22.1%; width:7.9vw"></div>
+      <div class="line hor uncanny" style="top:171vw; left:32.1%; width:7.9vw"></div>
 
 <!-- boxes -->
       <div class="box small getgoing" id="boxgetgoing" style="top:25vw; left:2%">GET GOING!</div>
       <div class="box small bur" id="boxbur" style="top:13.5vw; left:27%">BUREAUCRACY COMPLEX</div>
       <div class="box small intim" id="boxintim" style="top:4vw; left:70%">GLOBALIZING INTIMACY</div>
       <div class="box small fourth" id="boxfourth" style="top:37vw; left:45%">FOURTH DIMENSION</div>
-      <div class="box small insideout" id="boxinsideout" style="top:56vw; left:2%">INSIDE/OUT booklet</div>
-      <div class="box small insideout" id="boxinsideout" style="top:88vw; left:2%">INSIDE/OUT book</div>
-      <div class="box small insideout" id="boxinsideout" style="top:120vw; left:30%">INSIDE/OUT installation</div>
+      <div class="box small insideout" id="boxinsideout1" style="top:56vw; left:2%">INSIDE/OUT booklet</div>
+      <div class="box small poem" id="boxpoem" style="top:88vw; left:2%">INSIDE/OUT book</div>
+      <!-- <div class="box small insideout" id="ininstall" style="top:120vw; left:30%">INSIDE/OUT installation</div> -->
       <div class="box small objects" id="boxobjects" style="top:65vw; left:55%">52.083967, 4.239759</div>
-      <div class="box small miscon" id="miscon" style="top:97vw; left:60%">MISCONNECTION</div>
-      <div class="box small jorplace" id="boxjorplace" style="top:140vw; left:55%">POSTERS for Jorplace Hostel</div>
-      <div class="box small practice" id="boxpractice" style="top:140vw; left:4%">THE PRACTICE</div>
-
-
-      <!-- <div class="box portrait whatisaid" id="boxwhatisaid" style="top:130vw; left:50%">I WANT TO KNOW WHAT I SAID</div>
-      <div class="box small uncanny" id="uncanny" style="top:160vw; left:70%">UNCANNY</div>
-      <div class="box small enemy" id="enemy" style="top:180vw; left:2%">KEEP THEM CLOSE</div>
-      <div class="box small dr" id="dr" style="top:200vw; left:50%">DRAWING</div> -->
+      <div class="box small miscon" id="miscon" style="top:97vw; left:60%">MIS&shy;CONNECTION</div>
+      <div class="box small jorplace" id="boxjorplace" style="top:143vw; left:55%">JORPLACE HOSTEL</div>
+      <div class="box small practice" id="boxpractice" style="top:135vw; left:25%">THE PRACTICE</div>
+      <div class="box small uncanny" id="boxuncanny" style="top:165vw; left:34%">THE UNCANNY</div>
 
 <!-- text -->
-      <div class ="text getgoing" id= "text_getgoing">Get Going! or a Survival Guide for the Graphic Designer in the age of coming Insurrection. <br>As a result of investigating how the rebellious text, written by the anonymous group "Invisible Comittee", is connected to the future of Graphic Design. Designed with the open source program, using only open source typefaces and produced manualy.
+      <div class ="text getgoing" id= "text_getgoing">
+           or a Graphic Designer Survival Guide in the Age of Coming Insurrection.
+           <br>
+           <br>This book is a result of investigating the rebellious unticapitalist political tract of
+           the anonymous French group of activists, calling themselves "The Invisible Committee".
+           In the selected parts of the tract, the author/authors are elaborating
+           on the role of graphic designer in politics and society.
+           <br>
+           <br>
+           Designed with the open source desktop publishing program Scribus.
+           <br>Digital print, recycled paper.<br>
+           <br>2017
       </div>
-      <div class ="text bur" id= "text_bur">We live under a system of bureaucratic principles which are extended to every aspect of our existence. What we call "globalization” has nothing to do with the effacement of borders and the free movement of people, products, and ideas, but rather trapping people behind national borders. This project is a model of the world's effective planetary-scale administrative bureaucratic system currently in place.
-          <br>In collaboration with Rebecca Rui.
-      </div>
-      <div class ="text intim" id ="text_intim">Internet, as a disembodied form of communication, often assumed to be impersonal and untrustworthy. “Globalising intimacy” is an installation, visualising how the absence of physical proximity creates intimacy.
-        The installation includes 2 screens, placed in 2 different spots. Each of them shows the same message. However, you can only read the message how it is supposed to be if both you and the person in front of the other screen stands still. If one of you is moving the message is distorted. If one of you is absent, there's a piece of text missing.
-            <br>In collaboration with Dora Kerekes.
-            <br>With special thanks to Daniel Shiffman, Edwin Jakobs, Lizzie Malcolm, Boyd Rotgans, Gabor Kerekes.
-      </div>
-      <div class ="text fourth" id ="text_fourth">The interactive installation "Fourth Dimension" is an attampt to comprehence the idea of a 4-dimesional space. Combining 4 different media (visual projection, sound, touch and space) and influencing different sources of perception, the project works as a fluid constraction, reacting on touch, by changing visual and sound aspects.
-        <br>Exhibition "Moving Cities, Moving Type".
-        <br>14 December 2015.
-        <br>Fokker Terminal. Den Haag.
-      </div>
-      <div class ="text insideout" id ="text_insideout">
-        Text about the booklet.
-        Part of installation and poetry
 
-        <br>in collaboration with Raphaël Maman.
-        <br>"Sexy Times exhibition".
-        <br>14-15 January 2017
-        <br>Sociëteit SEXYLAND. Amsterdam
+      <div class ="text bur" id= "text_bur">
+           We live under a system of bureaucratic principles which are extended to every aspect of our existence.
+           What we call "globalization" has nothing to do with the effacement of borders and the free movement of people,
+           products, and ideas, but rather trapping people behind national borders.
+           This project is a model of the world's effective planetary-scale administrative
+           bureaucratic system currently in place.
+           <br>
+           <br>In collaboration with Rebecca Rui.
+           <br>
+           <br>"Borderless States" at the Waag Society, Amsterdam.
+           <br>01-09-2016 to 31-12-2016
+           <br>
+           <br>Royal Academy of Arts (KABK) Open Day.
+           <br>28-01-2017
       </div>
+
+      <div class ="text intim" id ="text_intim">
+            Internet, as a disembodied form of communication, often assumed to be impersonal and untrustworthy.
+            "Globalising intimacy" is an installation, visualising how the absence of physical proximity creates intimacy.
+            The installation includes 2 screens, placed in 2 different distant spots.
+            Each of them shows the same message. However, you can only read the full message, if both
+            you and the person in front of the other screen stand still.
+            If one of you is moving the message is distorted.
+            If one of you is absent, there's a piece of text missing.
+            <br>
+            <br>In collaboration with Dora Kerekes.
+            <br>With special thanks to Edwin Jakobs, Lizzie Malcolm, Daniel Shiffman.
+            <br>
+            <br>Processing, kinect, 2 screens.
+            <br>
+            <br>"Moving Cities, Moving Type" at Fokker Terminal, the Hague.
+            <br>14-12-2015
+            <br>
+            <br>Royal Academy of Arts (KABK) Open Day.
+            <br>28-01-2016
+      </div>
+
+      <div class ="text fourth" id ="text_fourth">
+            The interactive installation "Fourth Dimension" is an attampt to comprehence the idea
+            of a 4-dimesional space. Combining 4 different media
+            (visual projection, sound, touch and space) and influencing different sources of perception,
+            the project works as a fluid constraction, reacting on touch, by changing visual and sound aspects.
+            <br>
+            <br>With special thanks to Jakob Schlotter (LUSTlab).
+            <br>
+            <br>Processing, kinect, beamer, wooden frame, fabric.
+            <br>
+            <br>2016
+      </div>
+
+      <div class ="text objects" id ="text_objects">
+            Project "52.083967, 4.239759" is centered around the idea of impossibility
+            of the absolute understanding between people, which is, in my opinion, - interpretation.
+            Referring to the deconstraction theories, John Berger's ideas on mystification and other sources,
+            the project "52.083967, 4.239759" is offering a viewer to follow the very intuitive 'paths' of interpretation,
+            revealing one specific way of seeing.
+            <br>
+            Startiung with a simple representation like a drawing or photograph,
+            10 objects were taken out of their initial context.
+            The end result turned into the installation, where all the interpresentations of the objects were being presented.
+            "52.083967, 4.239759" is an attempt to understand and to explore a fragile intuitive process
+            of communication, full of multilayered connections.
+            <br>
+            <br>Publication and installation.
+            <br>Drawing, photograph, digital print, screen, clay, plastic, wood etc.
+            <br>
+            <br>2015
+      </div>
+
+      <div class ="text insideout" id ="text_insideout">
+            This booklet is an associative collage, forming a narrative about
+            the relation between the "inner" egoistic self and the "outer" other.
+            Slowly going from the outside and zooming in on the inside, it tells a story about
+            the development of the relationship.
+            <br>
+            <br>In collaboration with Raphael Maman.
+            <br>
+            <br>"Sexy Times" at Societeit SEXYLAND, Amsterdam
+            <br>14-15-2017
+      </div>
+
+      <div class ="text poem" id ="text_poem">
+            The combined poem
+            is a continuation of the development of the same concept as in all the other
+            works within the serie "INSIDE/OUT": the relation between the "inner" egoistic self and the "outer" other.
+            This book is a result of collaboration of the 3rd year Graphic Design students KABK.
+            It is a collection of erotic stories and poetry, some of which were performed at the exhibition "Sexy Times".
+            <br>
+            <br>In collaboration with Raphael Maman
+            <br>(The 'inside' part in French).
+            <br>
+            <br>"Sexy Times" at Societeit SEXYLAND, Amsterdam
+            <br>14-15-2017
+      </div>
+
+      <div class ="text miscon" id ="text_miscon">
+            My alter-ego is a representation of the distortion, inherent to perception,
+            which sometimes can be used as a defence.
+            <br>
+            <br>Plaxiglass, framewire, glue. a lot of glue.
+            <br>Camera: Canon 400D
+            <br>
+            <br>2015
+      </div>
+
+      <div class ="text jorplace" id ="text_jorplace" >
+            A series of posters for events at the Jorplace Hostel in Scheveningen, the Hague.
+            The hostel is currently holding 2 events per month:
+            <br>
+            "Oud Hollansche Avond", an evening for playing Dutch traditional board games,
+            <br>
+            and "Cafe de Zeeman", a party.
+            <br>
+            <br>Riso print
+            <br>
+            <br>2017
+      </div>
+
+      <div class ="text practice" id ="text_practice" >
+            We are the band project.
+            The followers of the "Blue Light"
+            <br>
+            <br>
+            Dokzaal, Amsterdam.
+            <br>
+            <br>03-06-2016
+      </div>
+
+      <div class ="text uncanny" id ="text_uncanny" >
+            Visual experiment based on the reaserch of the topic "Uncanny Valley"
+            <br>
+            <br>
+            Clay, Meshmixer, Cinema 4D.
+            <br>
+            <br>Royal Academy of Arts (KABK) Open Day.
+            <br>28-01-2017
+      </div>
+
+
+
 
   <!-- images -->
      <div class="images getgoing" id="getgoing"><img src="images/getgoing1.jpg"/></div>
@@ -524,6 +743,9 @@ function getImageGroup( image ) {
 
      <div class="images insideout" id="insideout1"><img src="images/insideout1.jpg"/></div>
      <div class="images insideout" id="insideout2"><img src="images/insideout2.jpg"/></div>
+
+     <div class="images poem" id="poem1"><img src="images/insideout_book1.jpg"/></div>
+     <div class="images poem" id="poem2"><img src="images/insideout_book3.jpg"/></div>
 
      <div class="images objects" id="objects1"><img src="images/objects.gif"/></div>
      <div class="images objects" id="objects2"><img src="images/objects1.jpg"/></div>
@@ -611,13 +833,13 @@ function getImageGroup( image ) {
             <img src="images/intim2.jpg">
           </li>
           <li>
-            <img src="images/dora1.jpg">
+            <img class="vertical" src="images/dora1.jpg">
           </li>
           <li>
-            <img src="images/dora2.jpg">
+            <img class="vertical" src="images/dora2.jpg">
           </li>
           <li>
-            <img src="images/dora3.jpg">
+            <img class="vertical" src="images/dora3.jpg">
           </li>
           <li>
             <img src="images/dora4.jpg">
@@ -629,7 +851,6 @@ function getImageGroup( image ) {
             <img src="images/taya2.jpg">
           </li>
         </ul>
-            <div class = "project_description">GLOBALIZING INTIMACY.</div>
             <span class = "switch prevButton"></span>
             <span class = "switch nextButton"></span>
       </div>
@@ -703,6 +924,32 @@ function getImageGroup( image ) {
             <span class = "switch nextButton"></span>
       </div>
 
+      <div id="container_poem">
+        <span class = "exit"></span>
+        <ul>
+          <li>
+            <img class="vertical" src="images/insideout_book1.jpg">
+          </li>
+          <li>
+            <img class="vertical" src="images/insideout_book2.jpg">
+          </li>
+          <li>
+            <img class="vertical" src="images/insideout_book3.jpg">
+          </li>
+          <li>
+            <img class="vertical" src="images/insideout_book4.jpg">
+          </li>
+          <li>
+            <img class="vertical" src="images/insideout_book5.jpg">
+          </li>
+          <li>
+            <img class="vertical" src="images/insideout_book8.jpg">
+          </li>
+        </ul>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+
       <div id="container_objects">
         <span class = "exit"></span>
         <ul>
@@ -722,7 +969,22 @@ function getImageGroup( image ) {
                   <img src="images/objects1.jpg">
                  </li>
                  <li>
-                  <img src="images/objects2.jpg">
+                  <img class = "vertical" src="images/objects2.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_spread.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_spread1.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_spread2.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_spread3.jpg">
+                 </li>
+                 <li>
+                  <img src="images/objects_spread4.jpg">
                  </li>
                  <li>
                   <img src="images/objects_expo1.jpg">
@@ -731,7 +993,7 @@ function getImageGroup( image ) {
                   <img src="images/objects_expo2.jpg">
                  </li>
                  <li>
-                  <img src="images/objects_expo3.jpg">
+                  <img class="vertical" src="images/objects_expo3.jpg">
                  </li>
                  <li>
                   <img src="images/objects_expo4.jpg">
@@ -751,12 +1013,6 @@ function getImageGroup( image ) {
                  <li>
                   <img src="images/objects_expo9.jpg">
                  </li>
-                 <li>
-                  <img src="images/objects_expo10.jpg">
-                 </li>
-                 <li>
-                  <img src="images/objects_expo11.jpg">
-                 </li>
         </ul>
             <span class = "switch prevButton"></span>
             <span class = "switch nextButton"></span>
@@ -775,10 +1031,10 @@ function getImageGroup( image ) {
                   <img src="images/miscon4.jpg">
                  </li>
                  <li>
-                  <img src="images/miscon_book1.jpg">
+                  <img class ="vertical" src="images/miscon_book1.jpg">
                  </li>
                  <li>
-                  <img src="images/miscon_book2.jpg">
+                  <img class ="vertical" src="images/miscon_book2.jpg">
                  </li>
 
         </ul>
@@ -790,13 +1046,13 @@ function getImageGroup( image ) {
         <span class = "exit"></span>
         <ul>
                 <li>
-                  <img src="images/ha_comb1.jpg">
+                  <img class="vertical" src="images/ha_comb1.jpg">
                  </li>
                  <li>
-                  <img src="images/ha_comb2.jpg">
+                  <img class="vertical" src="images/ha_comb2.jpg">
                  </li>
                  <li>
-                  <img src="images/ha2.gif">
+                  <img class="vertical" src="images/ha2.gif">
                  </li>
 
         </ul>
@@ -807,19 +1063,53 @@ function getImageGroup( image ) {
       <div id="container_practice">
         <span class = "exit"></span>
         <ul>
-                <li>
-                  <img src="images/practice1.jpg">
+                 <li>
+                    <iframe  class ="li_video_practice" src="https://www.youtube.com/embed/LEKYyVTy6mk?&showinfo=0&controls=0version=3&enablejsapi=1" frameborder="0" allowfullscreen="true" ></iframe>
                  </li>
                  <li>
-                  <img src="images/practice2.gif">
+                  <img src="images/practice3.jpg">
                  </li>
-
+                 <li>
+                  <img src="images/practice4.jpg">
+                 </li>
+                 <li>
+                  <img src="images/practice5.jpg">
+                 </li>
+                 <li>
+                  <img class ="vertical" src="images/practice1.jpg">
+                 </li>
+                 <li>
+                  <img class ="vertical" src="images/practice2.gif">
+                 </li>
+                 <li>
+                  <img src="images/practice_silk1.jpg">
+                 </li>
+                 <li>
+                  <img src="images/practice_silk2.jpg">
+                 </li>
+                 <li>
+                  <img src="images/practice_silk3.jpg">
+                 </li>
         </ul>
             <span class = "switch prevButton"></span>
             <span class = "switch nextButton"></span>
       </div>
 
-<div class="header" id="name"><a href="index.html">taya reshetnik</a></div>
+      <div id="container_uncanny">
+        <span class = "exit"></span>
+        <ul>
+                 <li>
+                    <iframe  class ="li_video_uncanny" src="https://www.youtube.com/embed/WNNLDdSSBl0?&showinfo=0&controls=0version=3&enablejsapi=1" frameborder="0" allowfullscreen="true" ></iframe>
+                 </li>
+        </ul>
+            <span class = "switch prevButton"></span>
+            <span class = "switch nextButton"></span>
+      </div>
+
+<div class="header" id="name"><a href="contacts.html">taya reshetnik</a></div>
+
+
+
 
 </body>
 </html>
