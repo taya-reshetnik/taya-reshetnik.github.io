@@ -10,7 +10,7 @@ html, body { height: 100% }
 
 /*body of the page*/
 
-.images img, .text{
+.images img, .text, .linkto{
 	width: 100%;
 	height: auto;
 	opacity: 0;
@@ -52,11 +52,26 @@ div.box {
 	color: black;
 }
 
+.linkto {
+	position: absolute;
+	opacity: 1;
+	padding: 1%;
+	font-family: 'Roboto Condensed';
+	font-size: 1.5vw;
+	font-weight: 400;
+	font-style: bold;
+	color: black;
+	top: 10%;
+	right: 2%;
+	z-index: 1000;
+
+}
+
 #name { right:2%; top:1vw; cursor:pointer}
 #name:hover {font-style: italic}
 #contact { right: 2%; top:4vw}
 
-div.text.rollovered,
+
 div.box.rollovered,
 div.images.rollovered img {
 	font-family: 'Roboto' !important;
@@ -65,6 +80,13 @@ div.images.rollovered img {
 	box-shadow: 0.5vw 0.5vw 0.5vw #888888;
 	cursor:pointer;
 	z-index: 3000;
+}
+div.text.rollovered {
+	font-family: 'Roboto' !important;
+	opacity: 1;
+	box-shadow: 0.5vw 0.5vw 0.5vw #888888;
+	cursor:pointer;
+  z-index: 3000
 }
 
 div.line.blended {
@@ -76,11 +98,13 @@ div.images.blended {
 	border-color: rgba(0,0,0,0.25) !important;
 }
 
+/*images*/
 #getgoing,
 #bur1, #bur2, #bur3,
 #fourth1, #fourth2, #fourth3, #fourth4,
 #intim1, #intim2,
 #insideout1, #insideout2,
+#poem1, #poem2,
 #objects1, #objects2, #objects3, #objects4,
 #miscon1, #miscon2, #miscon4, #miscon5,
 #jorplace1, #jorplace2,#jorplace3,
@@ -105,55 +129,52 @@ div.images.blended {
 #intim2   { left:68%; top:19vw; width:12%;}
 #insideout1 { left:2%; top:40vw; width:20%;}
 #insideout2 { left:4%; top:66vw; width:30%;}
+#poem1 { left:20%; top:92vw; width:20%;}
+#poem2 { left:4%; top:109vw; width:30%;}
 #objects1 { left:50%; top:80vw; width:20%;}
 #objects2 { left:45%; top:48vw; width:20%;}
 #objects3 { left:72%; top:58vw; width:25%;}
 #objects4 { left:38%; top:65vw; width:14%;}
 #miscon1 { right: 2%; top:112vw; width:20%;}
 #miscon2 { right:2%; top:96vw; width:20%;}
-#miscon4 { left:50%; top:107vw; width:18%;}
-#miscon5 { left:50%; top:123vw; width:20%;}
-#jorplace1 { right:2%; top:146vw; width:15%;}
-#jorplace3 { left:60%; top:150vw; width:15%;}
-#practice1 { left:60%; top:170vw; width:15%;}
-#practice2 { left:60%; top:180vw; width:15%;}
-#uncanny1 { left:25%; top:180vw; width:30%;}
+#miscon4 { left:45%; top:108vw; width:18%;}
+#miscon5 { left:50%; top:123vw; width:23%;}
+#jorplace1 { right:2%; top:148.1vw; width:25%;}
+#jorplace3 { left:53%; top:160vw; width:15%;}
+#practice1 { left:30%; top:147vw; width:15%;}
+#practice2 { left:2%; top:135vw; width:20%;}
+#uncanny1 { left:2%; top:167vw; width:30%;}
 
+/*text*/
 .text {
 	color: black;
 	font-family: 'Roboto Condensed';
 	position: absolute;
-	font-size: 1.3vw;
+	font-size: 1.1vw;
 	font-weight: 200;
 /*	text-align: left;*/
 	padding: 1%;
 	font-weight: normal;
 	background-color: white;
 	border: 1px solid black;
-	z-index:-3000;
+	z-index:-300;
 }
 
 #text_getgoing{ width: 22%; left: 20vw; top: 2% }
-#text_bur{ width: 30%; left: 44.5vw; top: 2% }
-#text_intim{ width: 20%; left: 44.5vw; top: 30% }
-#text_fourth{ width: 30%; left: 25vw; top: 30% }
-#text_insideout{ width: 30%; left: 25vw; top: 73% }
+#text_bur{ width: 22%; left: 70vw; top: 2% }
+#text_intim{ width: 22%; left: 20vw; top: 2% }
+#text_fourth{ width: 20%; left: 30vw; top:15% }
+#text_objects{ width: 20%; left: 14vw; top:80% }
+#text_insideout{ width: 22%; left: 30vw; top: 70% }
+#text_poem{ width: 22%; left: 45vw; top: 165% }
+#text_miscon{ width: 22%; left: 17vw; top: 185% }
+#text_jorplace{ width: 22%; left: 25vw; top: 270% }
+#text_practice{ width: 22%; left: 30vw; top: 295% }
+#text_uncanny{ width: 22%; left: 30vw; top: 300% }
 
-/*head of the page*/
-h1 {
-	color: black;
-	font-family: 'Roboto Condensed';
-	font-weight: normal;
-	font-style: italic;
-	font-size: 1vw;
-	position: fixed;
-	left: 100vw;
-	top: 45%;
-	height: 100px;
-	transform: rotate(90deg);
-	transform-origin: left top 0;
-}
 
+
+/*buttons*/
 .button {
 	position: fixed;
 	top: 1vw;
@@ -171,15 +192,18 @@ h1 {
 
 .button img:hover { opacity: 1;}
 
+/*slideshow*/
 #container_bur,
 #container_getgoing,
 #container_intim,
 #container_fourth,
 #container_insideout,
+#container_poem,
 #container_objects,
 #container_miscon,
 #container_jorplace,
-#container_practice
+#container_practice,
+#container_uncanny
 { position: fixed;
 	top: 0; left:0;
 	width: 100%;
@@ -193,10 +217,12 @@ h1 {
 #container_intim ul,
 #container_fourth ul,
 #container_insideout ul,
+#container_poem ul,
 #container_objects ul,
 #container_miscon ul,
 #container_jorplace ul,
-#container_practice ul
+#container_practice ul,
+#container_uncanny ul
 { position: absolute;
 	width: 100%;
 	height: 100%;
@@ -209,10 +235,12 @@ h1 {
 #container_intim li,
 #container_fourth li,
 #container_insideout li,
+#container_poem li,
 #container_objects li,
 #container_miscon li,
 #container_jorplace li,
-#container_practice li
+#container_practice li,
+#container_uncanny li
 { position:absolute;
 	width: 100%;
 	height: 100%;
@@ -225,38 +253,39 @@ h1 {
 #container_intim li:first-child,
 #container_fourth li:first-child,
 #container_insideout li:first-child,
+#container_poem li:first-child,
 #container_objects li:first-child,
 #container_miscon li:first-child,
 #container_jorplace li:first-child,
-#container_practice li:first-child
+#container_practice li:first-child,
+#container_uncanny li:first-child
 { display: list-item;}
 
 #container_bur img,
-/*#container_bur li,*/
 #container_bur iframe,
-/*#container_bur .li_video,
-#container_objects .li_video,*/
 #container_getgoing img:not(.vertical),
-#container_intim img,
+#container_intim img:not(.vertical),
 #container_fourth img,
 #container_insideout img,
-#container_objects img,
+#container_poem img:not(.vertical),
+#container_objects img:not(.vertical),
 #container_objects iframe,
-#container_miscon img,
-#container_jorplace img,
-#container_practice img
+#container_miscon img:not(.vertical),
+#container_jorplace img:not(.vertical),
+#container_practice img:not(.vertical),
+#container_practice iframe,
+#container_uncanny img,
+#container_uncanny iframe
 { position: absolute;
 	top: 50%; left: 50%;
 	z-index:300;
 	width: 85%;
 	height: auto;
-
 	max-width: 100%;
 	max-width: -webkit-calc(100% - 128px);
 	max-width: -moz-calc(100% - 128px);
 	max-width: calc(100% - 128px);
 	max-height: 95%;
-
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 	/*pointer-events: none;*/
    -webkit-user-select: none;
@@ -270,10 +299,11 @@ h1 {
        -moz-transform: translate(-50%, -50%);
     		transform: translate(-50%, -50%);
 }
-.vertical{
-height:90%;
-width:auto;
-position: absolute;
+
+.vertical {
+	height: 90%;
+	width:auto;
+	position: absolute;
 	top: 50%; left: 50%;
 	z-index:300;
 	max-width: 100%;
@@ -294,17 +324,15 @@ position: absolute;
     -webkit-transform: translate(-50%, -50%);
        -moz-transform: translate(-50%, -50%);
     		transform: translate(-50%, -50%);
-
 }
+
 #container_bur iframe,
-#container_objects iframe
-{
+#container_objects iframe,
+#container_practice iframe,
+#container_uncanny iframe {
 	height:90%;
 	width:90%;
 }
-
-
-
 
 /*buttons*/
 #container_getgoing .prevButton,
@@ -312,10 +340,12 @@ position: absolute;
 #container_intim .prevButton,
 #container_fourth .prevButton,
 #container_insideout .prevButton,
+#container_poem .prevButton,
 #container_objects .prevButton,
 #container_miscon .prevButton,
 #container_jorplace .prevButton,
-#container_practice .prevButton
+#container_practice .prevButton,
+#container_uncanny .prevButton
 { left: 2%;
   background-image: url('../images/button_prev.png');
   position: fixed;
@@ -335,11 +365,13 @@ position: absolute;
 #container_intim .nextButton,
 #container_fourth .nextButton,
 #container_insideout .nextButton,
+#container_poem .nextButton,
 #container_miscon .nextButton,
 #container_objects .nextButton,
 #container_jorplace .nextButton,
-#container_practice .nextButton
-{ right: 2%;
+#container_practice .nextButton,
+#container_uncanny .nextButton
+{ right: 1%;
   background-image: url('../images/button_next.png');
   position: fixed;
   top: 50%;
@@ -358,10 +390,12 @@ position: absolute;
 #container_intim .exit,
 #container_fourth .exit,
 #container_insideout .exit,
+#container_poem .exit,
 #container_objects .exit,
 #container_miscon .exit,
 #container_jorplace .exit,
-#container_practice .exit
+#container_practice .exit,
+#container_uncanny .exit
 { height:100%;
 	width:100%;
 	background-color: black;
