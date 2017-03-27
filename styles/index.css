@@ -37,7 +37,7 @@ div.line.ver { width: 1px }
 div.line.hor { height: 1px }
 
 div.box {
-	font-family: 'Roboto Condensed';
+	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 1.5vw;
 	font-weight: 400;
 	text-align: center;
@@ -46,7 +46,7 @@ div.box {
 .header {
 	position: fixed;
 	padding: 1%;
-	font-family: 'Roboto Condensed';
+	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 1.5vw;
 	font-weight: 400;
 	font-style: bold;
