@@ -120,21 +120,21 @@ function getImageGroup( image ) {
       </script>
       <script>
           $(document).ready(function(){
-              $("#bur1,#bur2,#bur3,#boxbur").click(function(){
+              $("#bur1, #bur2, #bur3, #boxbur").click(function(){
                 console.log("this is happening");
                   $("#container_bur") .show();
-                  $(".li_video")[0].src += "&autoplay=1";
+                  $("#video_bur")[0].src += "&autoplay=1";
                   $(this).unbind("click");
               });
               $(".exit").click(function(){
                 $("#container_bur") .hide();
-                  $('.li_video').each(function(){
+                  $('#video_bur').each(function(){
                     this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
                     console.log("it should stop");
                   });
               });
               $(".switch").click(function(){
-                  $('.li_video').each(function(){
+                  $('#video_bur').each(function(){
                     this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
                     console.log("it should stop");
                   });
@@ -681,10 +681,13 @@ function getImageGroup( image ) {
       </div>
 
       <div class ="text miscon" id ="text_miscon">
-            My alter-ego is a representation of the distortion, inherent to perception,
+            The idea that the absolute understanding of another person is not possible is somehow scary.
+            You will never be able to know what's really on someone else's mind.
+            For the project "Misconnection" I created an alter-ego.
+            This alter-ego is a representation of the distortion, inherent to perception,
             which sometimes can be used as a defence.
             <br>
-            <br>Plaxiglass, framewire, glue. a lot of glue.
+            <br>Plaxiglass, framewire, glue.
             <br>Camera: Canon 400D
             <br>
             <br>2015
@@ -704,8 +707,17 @@ function getImageGroup( image ) {
       </div>
 
       <div class ="text practice" id ="text_practice" >
-            We are the band project.
-            The followers of the "Blue Light"
+            What does it mean to have a band? And how do you make a band in a couple of months?
+            Together with my classmates we tried to figure it out, being a part of a project "We are the band2".
+            During this project, graphic design students, sometimes without any experience in
+            sound design or performance, were creating a band, a music video, posters, costumes and merchandise for the final
+            permormance at the consert in Amsterdam.
+            <br>
+            The band "Practice" is practising the magic of the "blue light".
+            A mysterious ritual of trying to bring back the lost connection
+            was performed in front of the audience.
+            <br>
+            <br>In collaboration with Iris Lam and Alfonso Yordi Martinez.
             <br>
             <br>
             Dokzaal, Amsterdam.
@@ -714,7 +726,10 @@ function getImageGroup( image ) {
       </div>
 
       <div class ="text uncanny" id ="text_uncanny" >
-            Visual experiment based on the reaserch of the topic "Uncanny Valley"
+            A human desire to imitate a human-like figures is really absurd, if you think about.
+            This video is an experiment, a reflection on the reaserch of the topic "Uncanny Valley".
+            After making a clay sculpture, digitizing it, i tried to simulate a living-like organism,
+            which creates a uneasy uncomforting feeling.
             <br>
             <br>
             Clay, Meshmixer, Cinema 4D.
@@ -802,7 +817,7 @@ function getImageGroup( image ) {
         <span class = "exit"></span>
         <ul>
             <li>
-              <iframe  class ="li_video" src="https://www.youtube.com/embed/55jV1h7qi0k?version=3&enablejsapi=1" frameborder="0" allowfullscreen="true" ></iframe>
+              <iframe  class ="li_video" id="video_bur" src="http://www.youtube.com/embed/55jV1h7qi0k?version=3&enablejsapi=1" frameborder="0" allowfullscreen="true" ></iframe>
             </li>
             <li>
               <img src="images/bur1.jpg">
@@ -1116,7 +1131,7 @@ function getImageGroup( image ) {
 
 <div class="header" id="name"><a href="contacts.html">taya reshetnik</a></div>
 
-<!-- <div><a class="linkto" id="rebecca" href="https://www.rebeccarui.com/">rebecca rui</a><div> -->
+<!-- <div class="linkto" id="rebecca" >in collaboration with<a href="https://www.rebeccarui.com/"><br>rebecca rui</a><div> -->
 <!-- <a class="linkto" id="dora" href="https://www.rebeccarui.com/">Rebecca Rui</a>
 <a class="linkto" id="asya" href="https://www.rebeccarui.com/">Rebecca Rui</a>
 <a class="linkto" id="iris" href="http://irislam.nl/">Iris Lam</a> -->
