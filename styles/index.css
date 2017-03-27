@@ -15,6 +15,7 @@ html, body { height: 100% }
 	width: 100%;
 	height: auto;
 	opacity: 0;
+	/*display: none;*/
 	display: block;
 }
 
@@ -58,7 +59,7 @@ div.box {
 	opacity: 1;
 	padding: 1%;
 	font-family: 'Roboto Condensed';
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	font-weight: 400;
 	font-style: bold;
 	color: black;
@@ -78,6 +79,7 @@ div.images.rollovered img {
 	font-family: 'Roboto' !important;
 	font-style: italic;
 	opacity: 1;
+	/*display: block;*/
 	box-shadow: 0.5vw 0.5vw 0.5vw #888888;
 	cursor:pointer;
 	z-index: 3000;
@@ -170,7 +172,7 @@ div.images.blended {
 #text_poem{ width: 22%; left: 45vw; top: 165% }
 #text_miscon{ width: 22%; left: 17vw; top: 185% }
 #text_jorplace{ width: 22%; left: 25vw; top: 270% }
-#text_practice{ width: 22%; left: 30vw; top: 295% }
+#text_practice{ width: 22%; left: 50vw; top: 245% }
 #text_uncanny{ width: 22%; left: 50vw; top: 300% }
 
 
