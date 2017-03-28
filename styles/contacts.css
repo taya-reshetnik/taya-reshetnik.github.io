@@ -1,17 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 h1, .text ul, #about, #contact, #expo, #button {
-	font-family: 'Roboto Condensed';
-	font-size: 1.5vw;
+	font-family: 'Roboto';
+	font-size: 1.1vw;
 	font-weight: 400;
 	text-align: left;
-	padding: 2%;
+	padding: 1%;
 	list-style:none outside none;
 	position: absolute;
+}
+.header{
+	font-family: 'Roboto Condensed';
+	font-size: 1.5vw;
+
 }
 /*.text ul
 {font-family: 'Roboto'; font-size: 1.5vw; font-weight: 400; text-align: left; padding: 2%; list-style:none outside none;}*/
 
-#about { left:2%; top:2%; width:30vw }
-#contact { left:2%; top:40%; width:30vw }
-#expo { left: 60%; top: 2%; width: 40vw }
+#about { left:3%; top:3%; width:30vw }
+#contact { left:60%; top:3%; width:30vw }
+#expo { left: 60%; top: 30%; width: 40vw }
 
-#button { background: white; border: 1px solid black; top: 70%; left: 2%}
+#button { background: white; border: 1px solid black; top: 70%; left: 5%}
+#button :hover {
+	font-style: italic;
+}
+
+a:link{text-decoration: none; color:black; background-color: yellow; }
+a:visited {text-decoration: none; color:black; background-color: #e3e4e8;}
+a:hover {font-style: italic;}
