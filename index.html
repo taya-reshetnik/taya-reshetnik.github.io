@@ -124,6 +124,7 @@ function getImageGroup( image ) {
                 console.log("this is happening");
                   $("#container_bur") .show();
                   $("#video_bur")[0].src += "&autoplay=1";
+                    this.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
                   $(this).unbind("click");
               });
               $(".exit").click(function(){
@@ -141,7 +142,6 @@ function getImageGroup( image ) {
               });
           });
       </script>
-
       <script>
           $(window).load(function(){
               var pages = $('#container_intim li'), current=0;
@@ -326,6 +326,7 @@ function getImageGroup( image ) {
                 console.log("this is happening");
                   $("#container_objects") .show();
                   $(".li_video_video")[0].src += "&autoplay=1";
+                  this.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');  
                   $(this).unbind("click");
               });
               $(".exit").click(function(){
@@ -452,6 +453,7 @@ function getImageGroup( image ) {
                 console.log("this is happening");
                   $("#container_practice") .show();
                   $(".li_video_practice")[0].src += "&autoplay=1";
+                  this.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
                   $(this).unbind("click");
               });
               $(".exit").click(function(){
@@ -503,6 +505,7 @@ function getImageGroup( image ) {
               console.log("this is happening");
                 $("#container_uncanny") .show();
                 $(".li_video_uncanny")[0].src += "&autoplay=1";
+                this.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
                 $(this).unbind("click");
             });
             $(".exit").click(function(){
