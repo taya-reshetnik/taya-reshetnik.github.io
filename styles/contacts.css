@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Prompt');
 h1, .text ul, #about, #contact, #expo, #button {
-	font-family: 'Roboto';
+	font-family: 'Prompt', sans-serif;
 	font-size: 1.1vw;
 	font-weight: 400;
 	text-align: left;
@@ -10,7 +9,7 @@ h1, .text ul, #about, #contact, #expo, #button {
 	position: absolute;
 }
 .header{
-	font-family: 'Roboto Condensed';
+	font-family: 'Prompt', sans-serif;
 	font-size: 1.5vw;
 
 }
