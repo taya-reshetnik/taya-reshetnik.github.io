@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arimo', sans-serif;
-    overflow:hidden;
+/*     overflow:hidden; */
 }
 @-ms-viewport{
   width: device-width;
