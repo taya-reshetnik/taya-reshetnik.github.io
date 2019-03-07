@@ -106,10 +106,10 @@ img {width: 100%; padding:4px;}
 
 #container {
     width: 50%;
-    height: 98%;
+    height: 100%;
     background-color: white;
     /* border: 1px solid black; */
-    margin: 5px;
+/*     margin: 5px; */
     position: fixed;
     color: black;
     padding: 5px;
