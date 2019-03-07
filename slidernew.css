@@ -323,7 +323,7 @@ div.year-grid-item:hover{
   /* border: black solid 1px; */
   /* border-left: black solid 4px; */
   /* box-shadow: 5px 10px 20px red inset; */
-  box-shadow: 2px 2px 3px #888888;
+/*   box-shadow: 2px 2px 3px #888888; */
   color:black;
   background-color: yellow;
   /* font-style: italic; */
