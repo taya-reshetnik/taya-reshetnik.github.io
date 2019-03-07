@@ -73,7 +73,7 @@ body{background-color: black;}
 
 .image-container{
   display:none;
-  position: fixed;
+  position: absolute;
   left:51%;
   top:7%;
   overflow: hidden;
