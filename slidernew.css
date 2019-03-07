@@ -285,7 +285,7 @@ img {width: 100%; padding:4px;}
   /* background-color: red; */
   /* border: 1px black solid; */
   padding: 5px;
-/*   margin: 5px; */
+  margin: 5px;
 }
 .project-grid-item {
   text-align: center;
