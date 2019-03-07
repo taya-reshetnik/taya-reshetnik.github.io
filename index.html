@@ -289,14 +289,12 @@ function setwidth(){
 }
 
 function noscroll(){
-  $(".project-grid").mouseover(function(){
-    $(this).css("overflow","scroll");
-  });
   $(".d-text").mouseover(function(){
     $(this).css("overflow","scroll");
+    // $(".image-container").css("position","fixed");
   });
   $(".image-container").mouseover(function(){
-    $(this).css("overflow-y","scroll");
+    $(this).css("position","absolute");
     $(".d-text").css("overflow","hidden");
   });
 }
