@@ -510,6 +510,7 @@ a:hover {color:black; background-color: yellow; }
     background-color:red;
     z-index: 1000;
     position:fixed;
+    display:none;
     
 
 }
