@@ -504,3 +504,12 @@ a:hover {color:black; background-color: yellow; }
   display: none;
 }
 .exit:hover{cursor:pointer;}
+
+
+.alexweb {
+    background-color:red;
+    z-index: 1000;
+    position:fixed;
+    
+
+}
