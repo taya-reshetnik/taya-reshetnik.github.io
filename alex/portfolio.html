@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alex Avgud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="scripts/jquery.min.js"></script>
+
+<!-- PREVIEW -->
+  <script>
+      $(document).ready(function () {
+
+          $(".menu").hover(function () {
+                  $(".box_top_1").css("background-color", "red");
+                  $(this).css("background-color", "black");
+                  $(this).css("color", "white");
+            });
+            $(".menu").mouseleave(function () {
+                    $(".box_top_1").css("background-color", "black");
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "black");
+              });
+              $(".menu-2").hover(function () {
+                      $(".box_top_2").css("background-color", "red");
+                      $(this).css("background-color", "black");
+                      $(this).css("color", "white");
+                });
+                $(".menu-2").mouseleave(function () {
+                        $(".box_top_2").css("background-color", "black");
+                        $(this).css("background-color", "white");
+                        $(this).css("color", "black");
+                  });
+
+        $("#pr-a-1").hover(function () {
+                $(".image-container").css("display", "block");
+                $("#pr-a-1-img").css("display", "block");
+                // $(".thing-1").css("opacity", "1");
+          });
+              $("#pr-a-1").mouseleave(function () {
+                      $(".image-container").css("display", "none");
+                      $("#pr-a-1-img").css("display", "none");
+                      // $(".thing-1").css("opacity", "0");
+                });
+                    $("#pr-a-1").click(function () {
+                            $(".menu, .menu-2").css("display", "none");
+                            $(".gallery-cont-a-1").css("display", "block");
+                            $(".box_left").css("background-color", "red");
+                            $(".box_right").css("background-color", "red");
+                            $("#button-descr-a-1").css("display", "block");
+                            $("#back-menu").css("display", "block");
+                      });
+
+        $("#pr-a-2").hover(function () {
+                $(".image-container").css("display", "block");
+                $("#pr-a-2-img").css("display", "block");
+                // $(".thing-2").css("opacity", "1");
+          });
+              $("#pr-a-2").mouseleave(function () {
+                      $(".image-container").css("display", "none");
+                      $("#pr-a-2-img").css("display", "none");
+                      $(".thing-2").css("opacity", "0");
+                });
+                    $("#pr-a-2").click(function () {
+                            $(".menu, .menu-2").css("display", "none");
+                            $(".gallery-cont-a-2").css("display", "block");
+                            $(".box_left").css("background-color", "red");
+                            $(".box_right").css("background-color", "red");
+                            $("#button-descr-a-2").css("display", "block");
+                            $("#back-menu").css("display", "block");
+                      });
+
+        $("#pr-a-3").hover(function () {
+                $(".image-container").css("display", "block");
+                $("#pr-a-3-img").css("display", "block");
+                // $(".thing-3").css("opacity", "1");
+          });
+              $("#pr-a-3").mouseleave(function () {
+                      $(".image-container").css("display", "none");
+                      $("#pr-a-3-img").css("display", "none");
+                      // $(".box_top_2").css("color", "black");
+                      $(".thing-3").css("opacity", "0");
+                });
+                    $("#pr-a-3").click(function () {
+                            $(".menu, .menu-2").css("display", "none");
+                            $(".gallery-cont-a-3").css("display", "block");
+                            $(".box_left").css("background-color", "red");
+                            $(".box_right").css("background-color", "red");
+                            $("#button-descr-a-3").css("display", "block");
+                            $("#back-menu").css("display", "block");
+                      });
+
+        $("#pr-a-4").hover(function () {
+                $(".image-container").css("display", "block");
+                $("#pr-a-4-img").css("display", "block");
+                // $(".thing-4").css("opacity", "1");
+          });
+              $("#pr-a-4").mouseleave(function () {
+                      $(".image-container").css("display", "none");
+                      $("#pr-a-4-img").css("display", "none");
+                      // $(".thing-4").css("opacity", "0");
+                });
+                    $("#pr-a-4").click(function () {
+                            $(".menu, .menu-2").css("display", "none");
+                            $(".gallery-cont-a-4").css("display", "block");
+                            $(".box_left").css("background-color", "red");
+                            $(".box_right").css("background-color", "red");
+                            $("#button-descr-a-4").css("display", "block");
+                            $("#back-menu").css("display", "block");
+                      });
+
+        $("#pr-a-5").hover(function () {
+                $(".image-container").css("display", "block");
+                $("#pr-a-5-img").css("display", "block");
+                // $(".thing-5").css("opacity", "1");
+          });
+              $("#pr-a-5").mouseleave(function () {
+                      $(".image-container").css("display", "none");
+                      $("#pr-a-5-img").css("display", "none");
+                      // $(".box_top_2").css("color", "black");
+                      $(".thing-5").css("opacity", "0");
+                });
+                    $("#pr-a-5").click(function () {
+                            $(".menu, .menu-2").css("display", "none");
+                            $(".gallery-cont-a-5").css("display", "block");
+                            $(".box_left").css("background-color", "red");
+                            $(".box_right").css("background-color", "red");
+                            $("#button-descr-a-5").css("display", "block");
+                            $("#back-menu").css("display", "block");
+                      });
+
+        $("#pr-a-6").hover(function () {
+                $(".image-container").css("display", "block");
+                $("#pr-a-6-img").css("display", "block");
+                // $(".thing-6").css("opacity", "1");
+          });
+              $("#pr-a-6").mouseleave(function () {
+                      $(".image-container").css("display", "none");
+                      $("#pr-a-6-img").css("display", "none");
+                      // $(".box_top_2").css("color", "black");
+                      $(".thing-6").css("opacity", "0");
+                });
+                    $("#pr-a-6").click(function () {
+                            $(".menu, .menu-2").css("display", "none");
+                            $(".gallery-cont-a-6").css("display", "block");
+                            $(".box_left").css("background-color", "red");
+                            $(".box_right").css("background-color", "red");
+                            $("#button-descr-a-6").css("display", "block");
+                            $("#back-menu").css("display", "block");
+                      });
+
+        $("#pr-a-7").hover(function () {
+                $(".image-container").css("display", "block");
+                $("#pr-a-7-img").css("display", "block");
+                // $(".thing-7").css("opacity", "1");
+          });
+              $("#pr-a-7").mouseleave(function () {
+                      $(".image-container").css("display", "none");
+                      $("#pr-a-7-img").css("display", "none");
+                      // $(".box_top_2").css("color", "black");
+                      $(".thing-7").css("opacity", "0");
+                });
+                    $("#pr-a-7").click(function () {
+                            $(".menu, .menu-2").css("display", "none");
+                            $(".gallery-cont-a-7").css("display", "block");
+                            $(".box_left").css("background-color", "red");
+                            $(".box_right").css("background-color", "red");
+                            $("#button-descr-a-7").css("display", "block");
+                            $("#back-menu").css("display", "block");
+                      });
+
+
+
+
+
+            $("#pr-c-1").hover(function () {
+                    $(".image-container-2").css("display", "block");
+                    $("#pr-c-1-img").css("display", "block");
+                    // $(".thing-8").css("opacity", "1");
+              });
+                  $("#pr-c-1").mouseleave(function () {
+                          $(".image-container-2").css("display", "none");
+                          $("#pr-c-1-img").css("display", "none");
+                          // $(".box_top_1").css("color", "black");
+                          // $(".thing-8").css("opacity", "0");
+                    });
+                        $("#pr-c-1").click(function () {
+                                $(".menu, .menu-2").css("display", "none");
+                                $(".gallery-cont-c-1").css("display", "block");
+                                $(".box_left").css("background-color", "red");
+                                $(".box_right").css("background-color", "red");
+                                $("#button-descr-c-1").css("display", "block");
+                                $("#back-menu").css("display", "block");
+                          });
+
+            $("#pr-c-2").hover(function () {
+                    $(".image-container-2").css("display", "block");
+                    $("#pr-c-30-img").css("display", "block");
+                    // $(".thing-9").css("opacity", "1");
+              });
+                  $("#pr-c-2").mouseleave(function () {
+                          $(".image-container-2").css("display", "none");
+                          $("#pr-c-30-img").css("display", "none");
+                          // $(".thing-9").css("opacity", "0");
+                    });
+                        $("#pr-c-2").click(function () {
+                                $(".menu, .menu-2").css("display", "none");
+                                $(".gallery-cont-c-2").css("display", "block");
+                                $(".box_left").css("background-color", "red");
+                                $(".box_right").css("background-color", "red");
+                                $("#button-descr-c-2").css("display", "block");
+                                $("#back-menu").css("display", "block");
+                          });
+
+            $("#pr-c-3").hover(function () {
+                    $(".image-container-2").css("display", "block");
+                    $("#pr-c-3-img").css("display", "block");
+                    // $(".thing-10").css("opacity", "1");
+              });
+                  $("#pr-c-3").mouseleave(function () {
+                          $(".image-container-2").css("display", "none");
+                          $("#pr-c-3-img").css("display", "none");
+                          // $(".thing-10").css("opacity", "0");
+                    });
+                        $("#pr-c-3").click(function () {
+                                $(".menu, .menu-2").css("display", "none");
+                                $(".gallery-cont-c-3").css("display", "block");
+                                $(".box_left").css("background-color", "red");
+                                $(".box_right").css("background-color", "red");
+                                $("#button-descr-c-3").css("display", "block");
+                                $("#back-menu").css("display", "block");
+                          });
+
+            $("#pr-c-4").hover(function () {
+                    $(".image-container-2").css("display", "block");
+                    $("#pr-c-4-img").css("display", "block");
+                    // $(".thing-11").css("opacity", "1");
+              });
+                  $("#pr-c-4").mouseleave(function () {
+                          $(".image-container-2").css("display", "none");
+                          $("#pr-c-4-img").css("display", "none");
+                          $(".thing-11").css("opacity", "0");
+                    });
+                        $("#pr-c-4").click(function () {
+                                $(".menu, .menu-2").css("display", "none");
+                                $(".gallery-cont-c-4").css("display", "block");
+                                $(".box_left").css("background-color", "red");
+                                $(".box_right").css("background-color", "red");
+                                $("#button-descr-c-4").css("display", "block");
+                                $("#back-menu").css("display", "block");
+                          });
+
+            $("#pr-c-5").hover(function () {
+                    $(".image-container-2").css("display", "block");
+                    $("#pr-c-5-img").css("display", "block");
+                    // $(".thing-12").css("opacity", "1");
+              });
+                  $("#pr-c-5").mouseleave(function () {
+                          $(".image-container-2").css("display", "none");
+                          $("#pr-c-5-img").css("display", "none");
+                          // $(".box_top_1").css("color", "black");
+                          $(".thing-12").css("opacity", "0");
+                    });
+                        $("#pr-c-5").click(function () {
+                                $(".menu, .menu-2").css("display", "none");
+                                $(".gallery-cont-c-5").css("display", "block");
+                                $(".box_left").css("background-color", "red");
+                                $(".box_right").css("background-color", "red");
+                                $("#button-descr-c-5").css("display", "block");
+                                $("#back-menu").css("display", "block");
+                          });
+
+                          $("#pr-c-6").hover(function () {
+                                  $(".image-container-2").css("display", "block");
+                                  $("#pr-c-6-img").css("display", "block");
+                                  // $(".thing-12").css("opacity", "1");
+                            });
+                                $("#pr-c-6").mouseleave(function () {
+                                        $(".image-container-2").css("display", "none");
+                                        $("#pr-c-6-img").css("display", "none");
+                                        $(".thing-12").css("opacity", "0");
+                                  });
+                                      $("#pr-c-6").click(function () {
+                                              $(".menu, .menu-2").css("display", "none");
+                                              $(".gallery-cont-c-6").css("display", "block");
+                                              $(".box_left").css("background-color", "red");
+                                              $(".box_right").css("background-color", "red");
+                                              $("#button-descr-c-6").css("display", "block");
+                                              $("#back-menu").css("display", "block");
+                                        });
+
+
+        $("#button-descr-a-1").click(function () {
+                $("#pr-a-descr-1").css("display", "block");
+          });
+          $("#button-descr-a-2").click(function () {
+                  $("#pr-a-descr-2").css("display", "block");
+            });
+            $("#button-descr-a-3").click(function () {
+                    $("#pr-a-descr-3").css("display", "block");
+              });
+              $("#button-descr-a-4").click(function () {
+                      $("#pr-a-descr-4").css("display", "block");
+                });
+                $("#button-descr-a-5").click(function () {
+                        $("#pr-a-descr-5").css("display", "block");
+                  });
+                  $("#button-descr-a-6").click(function () {
+                          $("#pr-a-descr-6").css("display", "block");
+                    });
+                    $("#button-descr-a-7").click(function () {
+                            $("#pr-a-descr-7").css("display", "block");
+                      });
+          $("#button-descr-c-1").click(function () {
+                  $("#pr-c-descr-1").css("display", "block");
+            });
+            $("#button-descr-c-2").click(function () {
+                    $("#pr-c-descr-2").css("display", "block");
+              });
+              $("#button-descr-c-3").click(function () {
+                      $("#pr-c-descr-3").css("display", "block");
+                });
+                $("#button-descr-c-4").click(function () {
+                        $("#pr-c-descr-4").css("display", "block");
+                  });
+                  $("#button-descr-c-5").click(function () {
+                          $("#pr-c-descr-5").css("display", "block");
+                    });
+                    $("#button-descr-c-6").click(function () {
+                            $("#pr-c-descr-6").css("display", "block");
+                      });
+
+        $("#back-menu").click(function () {
+                $(".box_left").css("background-color", "white");
+                $(".box_right").css("background-color", "white");
+                $(".pr-descr").css("display", "none");
+                $(".descr-button").css("display", "none");
+                $(".gallery-cont-a-1").css("display", "none");
+                $(".gallery-cont-a-2").css("display", "none");
+                $(".gallery-cont-a-3").css("display", "none");
+                $(".gallery-cont-a-4").css("display", "none");
+                $(".gallery-cont-a-5").css("display", "none");
+                $(".gallery-cont-a-6").css("display", "none");
+                $(".gallery-cont-a-7").css("display", "none");
+                $(".gallery-cont-c-1").css("display", "none");
+                $(".gallery-cont-c-2").css("display", "none");
+                $(".gallery-cont-c-3").css("display", "none");
+                $(".gallery-cont-c-4").css("display", "none");
+                $(".gallery-cont-c-5").css("display", "none");
+                $(".gallery-cont-c-6").css("display", "none");
+                $(".menu").css("display", "block");
+                $(".menu-2").css("display", "block");
+          });
+
+          $(".cross").click(function () {
+                  $(".pr-descr").css("display", "none");
+            });
+
+});
+
+var slideIndex = [1,1,1,1,1,1,1,1,1,1,1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8", "mySlides9", "mySlides10", "mySlides11", "mySlides12", "mySlides13"]
+showDivs(1, 0);
+showDivs(1, 1);
+showDivs(1, 2);
+showDivs(1, 3);
+showDivs(1, 4);
+showDivs(1, 5);
+showDivs(1, 6);
+showDivs(1, 7);
+showDivs(1, 8);
+showDivs(1, 9);
+showDivs(1, 10);
+showDivs(1, 11);
+showDivs(1, 12);
+
+function plusDivs(n, no) {
+  showDivs(slideIndex[no] += n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+
+
+</script>
+
+
+<!-- <script>
+var slideIndex = [1,1,1,1,1,1,1,1,1,1,1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8", "mySlides9", "mySlides10", "mySlides11", "mySlides12", "mySlides13"]
+showDivs(1, 0);
+showDivs(1, 1);
+showDivs(1, 2);
+showDivs(1, 3);
+showDivs(1, 4);
+showDivs(1, 5);
+showDivs(1, 6);
+showDivs(1, 7);
+showDivs(1, 8);
+showDivs(1, 9);
+showDivs(1, 10);
+showDivs(1, 11);
+showDivs(1, 12);
+
+function plusDivs(n, no) {
+  showDivs(slideIndex[no] += n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script> -->
+
+<script>
+$(document).bind('mousemove', function(e){
+  $('#cursor').css({
+     left:  e.pageX,
+     top:   e.pageY
+  });
+});
+</script>
+
+
+
+</head>
+<body>
+  <!-- <video class="video" autoplay><source src="images/short-term/complience/comp_video.mp4" type="video/mp4"></video> -->
+
+<div class="gallery">
+        <div class="gallery-cont-a-1">
+                <div class="inner"><img class="mySlides1 fade" src="images/auto/grad/inever_1.jpg"></div>
+                <div class="inner"><img class="mySlides1 fade" src="images/auto/grad/grad2.png"></div>
+                <div class="inner"><img class="mySlides1 fade" src="images/auto/grad/grad3.png"></div>
+                <div class="nametext">In My Village They Burn The Cabbage</div>
+
+                <a class="prev" onclick="plusDivs(-1, 0)">&#8592;</a>
+                <a class="next" onclick="plusDivs(1, 0)">&#8594;</a>
+
+
+        </div>
+
+        <div class="gallery-cont-a-2">
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_01.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_02.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_03.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_04.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_05.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_06.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_07.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_08.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_09.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_10.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_11.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_12.jpg"></div>
+              <div class="inner"><img class="mySlides2 fade" src="images/auto/coaldust/cd_13.jpg"></div>
+              <div class="nametext">Coal Dust</div>
+
+              <a class="prev" onclick="plusDivs(-1, 1)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 1)">&#8594;</a>
+        </div>
+
+        <div class="gallery-cont-a-3">
+              <div class="inner"><img class="mySlides3 fade" src="images/auto/martyrs/m_1.jpg"></div>
+              <div class="inner"><img class="mySlides3 fade" src="images/auto/martyrs/m_2.jpg"></div>
+              <div class="inner"><img class="mySlides3 fade" src="images/auto/martyrs/m_3.jpg"></div>
+              <div class="inner"><img class="mySlides3 fade" src="images/auto/martyrs/m_4.jpg"></div>
+              <div class="inner"><img class="mySlides3 fade" src="images/auto/martyrs/mar_inst_2.jpg"></div>
+              <div class="inner"><img class="mySlides3 fade" src="images/auto/martyrs/mar_inst_1.jpg"></div>
+              <div class="nametext">Modern Martyrs</div>
+
+              <a class="prev" onclick="plusDivs(-1, 2)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 2)">&#8594;</a>
+        </div>
+
+        <div class="gallery-cont-a-4">
+              <div class="inner"><img class="mySlides4 fade" src="images/auto/bhopp/bh_1.jpg"></div>
+              <div class="inner"><img class="mySlides4 fade" src="images/auto/bhopp/bh_2.jpg"></div>
+              <div class="inner"><img class="mySlides4 fade" src="images/auto/bhopp/bh_3.jpg"></div>
+              <div class="inner"><img class="mySlides4 fade" src="images/auto/bhopp/bh_4.jpg"></div>
+              <div class="inner"><img class="mySlides4 fade" src="images/auto/bhopp/bh_5.png"></div>
+              <div class="inner"><img class="mySlides4 fade" src="images/auto/bhopp/bh_6.jpg"></div>
+              <div class="inner"><img class="mySlides4 fade" src="images/auto/bhopp/bh_7.jpg"></div>
+              <div class="nametext">Brief History Of Power Play</div>
+
+              <a class="prev" onclick="plusDivs(-1, 3)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 3)">&#8594;</a>
+        </div>
+        <div class="gallery-cont-a-5">
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_01.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_02.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_03.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_04.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_05.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_06.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_07.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_08.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_09.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_10.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_11.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_12.png"></div>
+              <div class="inner"><img class="mySlides5 fade" src="images/auto/tetsuya/tetsuya_13.png"></div>
+              <div class="nametext">Tetsuya Ishihara</div>
+
+              <a class="prev" onclick="plusDivs(-1, 4)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 4)">&#8594;</a>
+        </div>
+
+        <div class="gallery-cont-a-6">
+              <div class="inner"><img class="mySlides6 fade" src="images/auto/complience/comp_1.png"></div>
+              <div class="inner"><img class="mySlides6 fade" src="images/auto/complience/comp_2.png"></div>
+              <div class="nametext">Compliance</div>
+
+              <a class="prev" onclick="plusDivs(-1, 5)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 5)">&#8594;</a>
+        </div>
+
+        <div class="gallery-cont-a-7">
+              <div class="inner"><img class="mySlides7 fade" src="images/auto/portraits/portrait_01.png"></div>
+              <div class="inner"><img class="mySlides7 fade" src="images/auto/portraits/portrait_02.jpg"></div>
+              <div class="inner"><img class="mySlides7 fade" src="images/auto/portraits/portrait_03.jpg"></div>
+              <div class="inner"><img class="mySlides7 fade" src="images/auto/portraits/portrait_04.png"></div>
+              <div class="inner"><img class="mySlides7 fade" src="images/auto/portraits/portrait_05.png"></div>
+              <div class="inner"><img class="mySlides7 fade" src="images/auto/portraits/portrait_06.jpg"></div>
+              <div class="inner"><img class="mySlides7 fade" src="images/auto/portraits/portrait_07.png"></div>
+              <div class="inner"><img class="mySlides7 fade" src="images/auto/portraits/portrait_08.png"></div>
+              <div class="inner"><img class="mySlides7 fade" src="images/auto/portraits/portrait_09.png"></div>
+              <div class="inner"><img class="mySlides7 fade" src="images/auto/portraits/portrait_10.png"></div>
+              <div class="nametext">Portraits</div>
+
+              <a class="prev" onclick="plusDivs(-1, 6)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 6)">&#8594;</a>
+        </div>
+
+        <div class="gallery-cont-c-1">
+              <div class="inner"><img class="mySlides8 fade" src="images/com/approx/approx_01.jpg"></div>
+              <div class="inner"><img class="mySlides8 fade" src="images/com/approx/approx_02.png"></div>
+              <div class="inner"><img class="mySlides8 fade" src="images/com/approx/approx_03.jpg"></div>
+              <div class="inner"><img class="mySlides8 fade" src="images/com/approx/approx_04.png"></div>
+              <div class="inner"><img class="mySlides8 fade" src="images/com/approx/approx_05.png"></div>
+              <div class="inner"><img class="mySlides8 fade" src="images/com/approx/approx_06.png"></div>
+              <div class="nametext">Approximation Of Void (Foam x Arles)</div>
+
+              <a class="prev" onclick="plusDivs(-1, 7)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 7)">&#8594;</a>
+        </div>
+
+        <div class="gallery-cont-c-2">
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_01.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_02.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_03.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_04.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_05.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_06.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_07.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_08.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_09.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_10.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_11.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_12.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_13.jpg"></div>
+              <div class="inner"><img class="mySlides9 fade" src="images/com/exposed/4mag_14.jpg"></div>
+              <div class="nametext">Exposed</div>
+
+              <a class="prev" onclick="plusDivs(-1, 8)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 8)">&#8594;</a>
+        </div>
+
+        <div class="gallery-cont-c-3">
+              <div class="inner"><img class="mySlides10 fade" src="images/com/areas/areas_1.jpg"></div>
+              <div class="inner"><img class="mySlides10 fade" src="images/com/areas/areas_2.jpg"></div>
+              <div class="nametext">Areas Of Intervention (Vrij Nederland)</div>
+
+              <a class="prev" onclick="plusDivs(-1, 9)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 9)">&#8594;</a>
+        </div>
+
+        <div class="gallery-cont-c-4">
+              <div class="inner"><img class="mySlides11 fade" src="images/com/others/others_01.png"></div>
+              <div class="inner"><img class="mySlides11 fade" src="images/com/others/others_02.png"></div>
+              <div class="inner"><img class="mySlides11 fade" src="images/com/others/others_03.png"></div>
+              <div class="inner"><img class="mySlides11 fade" src="images/com/others/others_04.png"></div>
+              <div class="inner"><img class="mySlides11 fade" src="images/com/others/others_05.png"></div>
+              <div class="inner"><img class="mySlides11 fade" src="images/com/others/others_06.png"></div>
+              <div class="inner"><img class="mySlides11 fade" src="images/com/others/others_07.png"></div>
+              <div class="nametext">Making Of The Others</div>
+
+              <a class="prev" onclick="plusDivs(-1, 10)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 10)">&#8594;</a>
+        </div>
+
+        <div class="gallery-cont-c-5">
+              <div class="inner"><img class="mySlides12 fade" src="images/com/shelter/shelter_01.jpg"></div>
+              <div class="inner"><img class="mySlides12 fade" src="images/com/shelter/shelter_02.jpg"></div>
+              <div class="inner"><img class="mySlides12 fade" src="images/com/shelter/shelter_03.jpg"></div>
+              <div class="inner"><img class="mySlides12 fade" src="images/com/shelter/shelter_04.png"></div>
+              <div class="nametext">Shelter</div>
+
+              <a class="prev" onclick="plusDivs(-1, 11)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 11)">&#8594;</a>
+        </div>
+
+        <div class="gallery-cont-c-6">
+              <div class="inner"><img class="mySlides13 fade" src="images/com/yuki/yuki_01.jpg"></div>
+              <div class="inner"><img class="mySlides13 fade" src="images/com/yuki/yuki_02.jpg"></div>
+              <div class="inner"><img class="mySlides13 fade" src="images/com/yuki/yuki_03.jpg"></div>
+              <div class="inner"><img class="mySlides13 fade" src="images/com/yuki/yuki_04.jpg"></div>
+              <div class="inner"><img class="mySlides13 fade" src="images/com/yuki/yuki_05.jpg"></div>
+              <div class="inner"><img class="mySlides13 fade" src="images/com/yuki/yuki_06.jpg"></div>
+              <div class="inner"><img class="mySlides13 fade" src="images/com/yuki/yuki_07.jpg"></div>
+              <div class="nametext">Yuki Ito</div>
+
+              <a class="prev" onclick="plusDivs(-1, 12)">&#8592;</a>
+              <a class="next" onclick="plusDivs(1, 12)">&#8594;</a>
+        </div>
+
+
+    <!-- <div class="gallery-cont-a-2">
+        <div class="block1">
+          <img class="mySlides2" src="images/auto/coaldust/cd_1.jpg">
+          <div class="numbertext">1/13</div>
+          <div class="nametext">Coal Dust</div>
+          <div class="caption">3:56 am.<br><br>A buzz of the phone.<br><br>'I want to die', your message says.<br><br>Our separation feels helpless,<br>and the place we called home&mdash;<br>wasted away.</div>
+        </div>
+              <div class="block1">
+                <img class="mySlides2" src="images/auto/coaldust/cd_2.jpg">
+                <div class="nametext">Coal Dust</div>
+                <div class="numbertext">2/13</div>
+              </div>
+                    <div class="block1">
+                      <img class="mySlides2" src="images/auto/coaldust/cd_3.jpg">
+                      <div class="nametext">Coal Dust</div>
+                      <div class="numbertext">3/13</div>
+                      <div class="caption">Didn't we choose to leave<br>because we stopped to dream?<br><br>And now we stopped<br>Even<br>falling<br>asleep.<br><br>What's left?&mdash;<br><br>The catatonia of cold pillows.<br><br>The cracked eggshells of eyeballs.</div>
+                    </div>
+                          <div class="block1">
+                            <img class="mySlides2" src="images/auto/coaldust/cd_4.jpg">
+                            <div class="nametext">Coal Dust</div>
+                            <div class="numbertext">4/13</div>
+                          </div>
+                                <div class="block1">
+                                  <img class="mySlides2" src="images/auto/coaldust/cd_5.jpg">
+                                  <div class="numbertext">5/13</div>
+                                  <div class="caption">I say&mdash;I want to forget.<br>You say&mdash;you can't take it anymore.<br><br>I ask who I am,<br>You&mdash;answer you're finished.<br><br><br>Cries and whispers.<br>Skype and anti-depressants.<br><br>What else<br>is on our shopping list?<br></div>
+                                </div>
+                                      <div class="block1">
+                                        <img class="mySlides2" src="images/auto/coaldust/cd_6.jpg">
+                                        <div class="nametext">Coal Dust</div>
+                                        <div class="numbertext">6/13</div>
+                                        <div class="caption">My shutter shutters.</div>
+                                      </div>
+                                            <div class="block1">
+                                              <img class="mySlides2" src="images/auto/coaldust/cd_7.jpg">
+                                              <div class="nametext">Coal Dust</div>
+                                              <div class="numbertext">7/13</div>
+                                            </div>
+                                                  <div class="block1">
+                                                    <img class="mySlides2" src="images/auto/coaldust/cd_8.jpg">
+                                                    <div class="nametext">Coal Dust</div>
+                                                    <div class="numbertext">8/13</div>
+                                                    <div class="caption">A bee sting is stuck<br>in the tongue of the past.<br><br>The future is empty,<br>splattered with fear.<br><br>So let's dwell on a wire<br>that the present is.<br><br>Let's trust&mdash;<br>For a bit&mdash;<br>The in-betweenness<br>of nowness...<br><br>And follow the trails on the map of howls<br>that we've bitten like dogs<br>into the shaky legs of our lives.<br></div>
+                                                  </div>
+                                                        <div class="block1">
+                                                          <img class="mySlides2" src="images/auto/coaldust/cd_9.jpg">
+                                                          <div class="nametext">Coal Dust</div>
+                                                          <div class="numbertext">9/13</div>
+                                                          <div class="caption">Before you change the tickets<br><br>and change them again<br><br>and again...<br><br>Until boarding passes&mdash;<br><br>become tombstones<br><br>of the times<br>we hadn't held hands.<br></div>
+                                                        </div>
+                                                              <div class="block1">
+                                                                <img class="mySlides2" src="images/auto/coaldust/cd_10.jpg">
+                                                                <div class="nametext">Coal Dust</div>
+                                                                <div class="numbertext">10/13</div>
+                                                              </div>
+                                                                    <div class="block1">
+                                                                      <img class="mySlides2" src="images/auto/coaldust/cd_11.jpg">
+                                                                      <div class="nametext">Coal Dust</div>
+                                                                      <div class="numbertext">11/13</div>
+                                                                      <div class="caption">I hum a tune<br>you used to sing in bed<br>into my shoulder blade.<br><br>I will lull you to sleep,<br>so that you can't bruise.<br><br>I will lull you to sleep,<br><br>so that you don't bruise.<br><br><br>3:57...<br><br>3:58</div>
+                                                                    </div>
+                                                                          <div class="block1">
+                                                                            <img class="mySlides2" src="images/auto/coaldust/cd_12.jpg">
+                                                                            <div class="nametext">Coal Dust</div>
+                                                                            <div class="numbertext">12/13</div>
+                                                                          </div>
+                                                                                <div class="block1">
+                                                                                  <img class="mySlides2" src="images/auto/coaldust/cd_13.jpg">
+                                                                                  <div class="nametext">Coal Dust</div>
+                                                                                  <div class="numbertext">13/13</div>
+                                                                                </div>
+            <a class="prev" onclick="plusSlides(-1)">&#8592;</a>
+            <a class="next" onclick="plusSlides(1)">&#8594;</a>
+    </div> -->
+
+
+
+
+</div>
+
+<div class="menu">
+  <div class="project_names">
+    <a class="pr-link" id="pr-a-1">In My Village They Burn The Cabbage,</a><br>
+    <a class="pr-link" id="pr-a-2">Coal Dust,</a><br>
+    <a class="pr-link" id="pr-a-6">Compliance,</a><br>
+    <a class="pr-link" id="pr-a-3">Modern Martyrs,</a><br>
+    <a class="pr-link" id="pr-a-5">Tetsuya Ishihara,</a><br>
+    <a class="pr-link" id="pr-a-4">Brief History of Power Play,</a><br>
+    <a class="pr-link" id="pr-a-7">Portraits.</a><br>
+  </div>
+
+  <div class="alex-hello">
+    <a class="pr-link">alex.avgud@gmail.com</a><br>
+    <a class="pr-link">+31(0)646688076</a><br>
+  </div>
+
+  <div class="image-container-2">
+    <div class="menu-img-pr"><img id="pr-c-1-img" src="images/com/approx/approx_05.png"></div>
+    <div class="menu-img-pr"><img id="pr-c-30-img" src="images/com/exposed/4mag_01.jpg"></div>
+    <div class="menu-img-pr"><img id="pr-c-3-img" src="images/com/areas/areas_1.jpg"></div>
+    <div class="menu-img-pr"><img id="pr-c-4-img" src="images/com/others/others_01.png"></div>
+    <div class="menu-img-pr"><img id="pr-c-5-img" src="images/com/shelter/shelter_01.jpg"></div>
+    <div class="menu-img-pr"><img id="pr-c-6-img" src="images/com/yuki/yuki_04.jpg"></div>
+  </div>
+
+</div>
+
+<div class="menu-2">
+  <div class="project_names">
+    <a class="pr-link" id="pr-c-1">Foam x Arles,</a><br>
+    <a class="pr-link" id="pr-c-3">Vrij Nederland,</a><br>
+    <a class="pr-link" id="pr-c-2">Exposed,</a><br>
+    <a class="pr-link" id="pr-c-4">Making Of The Others,</a><br>
+    <a class="pr-link" id="pr-c-5">Shelter,</a><br>
+    <a class="pr-link" id="pr-c-6">Yuki Ito.</a>
+    <!-- <div class="pr-comment">fashion</div> -->
+    <!-- <a class="pr-link" id="pr-c-6">Name of project,</a> -->
+  </div>
+
+  <div class="image-container">
+    <div class="menu-img-pr"><img id="pr-a-1-img" src="images/auto/grad/inever_1.jpg"></div>
+    <div class="menu-img-pr"><img id="pr-a-2-img" src="images/auto/coaldust/cd_01.jpg"></div>
+    <div class="menu-img-pr"><img id="pr-a-3-img" src="images/auto/martyrs/m_3.jpg"></div>
+    <div class="menu-img-pr"><img id="pr-a-4-img" src="images/auto/bhopp/bh_1.jpg"></div>
+    <div class="menu-img-pr"><img id="pr-a-5-img" src="images/auto/tetsuya/tetsuya_09.png"></div>
+    <div class="menu-img-pr"><img id="pr-a-6-img" src="images/auto/complience/comp_2.png"></div>
+    <div class="menu-img-pr"><img id="pr-a-7-img" src="images/auto/portraits/portrait_01.png"></div>
+  </div>
+
+</div>
+
+<!-- SEPARATE PROJECTS -->
+<!-- <div class="thing-1">
+    <div class="pr-extra-info">2019</div>
+    <div class="pr-extra-info">__</div>
+    <div class="pr-extra-info">Push It To The Limit/Royal Academy of Art, The Hague</div>
+</div>
+<div class="thing-2">
+    <div class="pr-extra-info">?</div>
+    <div class="pr-extra-info">?</div>
+    <div class="pr-extra-info">?</div>
+</div>
+<div class="thing-3">
+    <div class="pr-extra-info">2017</div>
+    <div class="pr-extra-info">Photo Series</div>
+    <div class="pr-extra-info">Let Me Tell You About.../Unseen, Amsterdam</div>
+</div>
+<div class="thing-4">
+    <div class="pr-extra-info">2017</div>
+    <div class="pr-extra-info">photo series</div>
+    <div class="pr-extra-info">__</div>
+</div>
+<div class="thing-5">
+    <div class="pr-extra-info">2018</div>
+    <div class="pr-extra-info">Photo Series</div>
+    <div class="pr-extra-info">Instagram Account</div>
+</div>
+<div class="thing-6">
+    <div class="pr-extra-info">?</div>
+    <div class="pr-extra-info">video performance</div>
+    <div class="pr-extra-info">?</div>
+</div>
+<div class="thing-7">
+    <div class="pr-extra-info">?</div>
+    <div class="pr-extra-info">Photo Series</div>
+    <div class="pr-extra-info">?</div>
+</div>
+<div class="thing-8">
+    <div class="pr-extra-info">08</div>
+    <div class="pr-extra-info">?</div>
+    <div class="pr-extra-info">?</div>
+</div>
+<div class="thing-9">
+    <div class="pr-extra-info">09</div>
+    <div class="pr-extra-info">?</div>
+    <div class="pr-extra-info">?</div>
+</div>
+<div class="thing-10">
+    <div class="pr-extra-info">10</div>
+    <div class="pr-extra-info">?</div>
+    <div class="pr-extra-info">?</div>
+</div>
+<div class="thing-11">
+    <div class="pr-extra-info">11</div>
+    <div class="pr-extra-info">?</div>
+    <div class="pr-extra-info">?</div>
+</div>
+<div class="thing-12">
+    <div class="pr-extra-info">12</div>
+    <div class="pr-extra-info">?</div>
+    <div class="pr-extra-info">?</div>
+</div> -->
+
+<div id="container">
+  <div id="drawer">
+    <div id="drawer-content">
+      <div class="d-text" id="text-1">
+        It started in my adolescent years. At that time I’ve been living on the working class
+      outskirts of Post-Soviet Moscow, had no internet access at home and possessed a
+      tormented sexuality. I didn’t know any gay people, and yet my father said he’d kill me if I
+      was one of them. I felt alien to the environment so imbued with traditionalism, and to
+      assemble my own private version of that world I started taking photographs.
+      Gloomy high-rises were ridden with hopelessness, and were hardly beautiful…
+      But the good thing about photography was that I could just find the right angles,
+      and crop bits out of reality, until reality gives in, bends, and stops to suffocate.
+      And thus photography became my freedom. Or at least it’s substitute.
+      Since then my work evolved into a continuous exploration of power and mechanisms of
+      oppression with a focus on human resistance to different versions of crises.
+      I’m intrigued by events and ideas that embody the conflict of ‘individual’ and ‘collective’,
+      so with my photographs I strive to engage the viewers into contemplation on their own
+      role in society. I approach political issues in a non-moralistic, often paradoxical way&mdash;like portraying something abhorrent as very beautiful&mdash;in order to trigger an emotional
+      response from the audience. A lot of my photographs are a documentation of staged
+      physical performances, which borrow significantly from the vocabulary of contemporary
+      choreography.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div id="container-2">
+  <div id="drawer-2">
+    <div id="drawer-content-st">
+      <div id="pr-a-descr-1">
+        The search for embodiments of compliance to contemporary power structures.
+        Together with French choreographer Antonin Rioche we aimed to create a
+        manifestation of a changing relation between the State and what it demands
+        from our bodies in the Cam- bridge Analytica era. Starting points for the
+        movements are based on effects of Shell Shock in WWI, and unmediated
+        reactions from the performer to the speeches by modern-day politicians. What
+        happens when it’s just our digital data the government needs, and not our flesh
+        suffering in the trenches?
+        And to what extent are we compliant to our own oppression?
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="pr-descr fade" id="pr-a-descr-1">
+      <div class="cross">&#10005;</div><br>
+      Graduation project. Coming soon.
+</div>
+
+<div class="pr-descr fade" id="pr-a-descr-2">
+      <div class="cross">&#10005;</div><br>
+      It all started like a journey into the past.<br>
+      Like washing away whom I was.<br>
+      But I was so busy healing old wounds<br>
+      That I didn't notice,<br>
+      How a new one was starting to grow, itch and ache.<br>
+      Infecting me, us, my project, our life.<br><br>
+      In 'Cold Dust' I address the state of in-betweenness experienced by a migrant,
+      whose past is obscured, and the present&mdash;scarred. I talk about emotional fragility
+      caused by relocation as a political choice, and what me and my husband recently
+      went through to keep us afloat.
+</div>
+
+
+<div class="pr-descr" id="pr-a-descr-3">
+  <div class="cross">&#10005;</div><br>
+  A series of performances exploring body language of political protest and iconography of resistance to acts
+  of police brutality. Project was exhibited during UNSEEN Photo Fair 2017 as part of a group show ‘Let Me Tell You About’.
+</div>
+
+<div class="pr-descr" id="pr-a-descr-4">
+  <div class="cross">&#10005;</div><br>
+  What is life if not a succession of power plays in which we have one or the other role? In my project
+  ‘Brief History of Power Play’ I have directed a series of performances, in which subjects were
+  offered a variety of ‘enemies’ on whom they could exert their power, fall under their control or engage
+  in exchange of applicable forces. They may be perceived as both direct examples of power play and
+  figures standing for it metaphorically.
+</div>
+
+<div class="pr-descr" id="pr-a-descr-5">
+  <div class="cross">&#10005;</div><br>
+  An instagram account set up under a false name, an alias, an alter ego. Would my style of
+  photography stand a better chance at recognition if I was Japanese? Project is a response
+  to aesthetic conventions existing in the photography world, and the difficulties to promote
+  work that doesn’t fit the narrative of expectation.
+</div>
+
+<div class="pr-descr" id="pr-a-descr-6">
+  <div class="cross">&#10005;</div><br>
+  The search for embodiments of compliance to contemporary power structures. Together with French
+  choreographer Antonin Rioche we aimed to create a manifestation of a changing relation between
+  the State and what it demands from our bodies in the Cambridge Analytica era. Starting points for
+  the movements are based on effects of Shell Shock in WWI, and unmediated reactions from the performer
+  to the speeches by modern-day politicians. What happens when it’s just our digital data the government
+  needs, and not our flesh suffering in the trenches? And to what extent are we compliant to our own oppression?
+</div>
+
+<div class="pr-descr" id="pr-a-descr-7">
+  <div class="cross">&#10005;</div><br>
+  portraits?
+</div>
+
+<div class="pr-descr" id="pr-c-descr-1">
+  <div class="cross">&#10005;</div><br>
+  Initiated by Foam Fotografie Museum Amsterdam for an exhibition at Les Rencontres d’Arles, project
+  is a long-distance collaboration with Miriam Bonaglia. Having started as exploration of long-held
+  labels surrounding male/female perception of fundamental dualities such as life and death or femininity
+  and masculinity, the project revolves around finding common ground through re-working, distorting and
+  sometimes destroying photographs of the partner as a trigger for intimacy when other forms of a long-distance
+  collaboration proved to be insufficient. Final result is a monumental installation - ‘a breathing monument
+  to a failed collaboration’ - a 30-meters roll of images intertwined with 15-meters roll of text on
+  transparent plastic. Together they form an object (4x2x2.5m) floating in the exhibition space, slowly being
+  destroyed by the draught in the building.
+</div>
+
+<div class="pr-descr" id="pr-c-descr-2">
+  <div class="cross">&#10005;</div><br>
+  to fill in
+</div>
+
+<div class="pr-descr" id="pr-c-descr-3">
+  <div class="cross">&#10005;</div><br>
+  to fill in
+</div>
+
+<div class="pr-descr" id="pr-c-descr-4">
+  <div class="cross">&#10005;</div><br>
+  to fill in
+</div>
+
+<div class="pr-descr" id="pr-c-descr-5">
+  <div class="cross">&#10005;</div><br>
+  to fill in
+</div>
+
+<div class="pr-descr" id="pr-c-descr-6">
+  <div class="cross">&#10005;</div><br>
+  to fill in
+</div>
+
+
+
+
+
+<!-- HEADERS-hor -->
+<div class="box_left">
+          <div class="descr-button" id="button-descr-a-1">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-a-2">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-a-3">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-a-4">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-a-5">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-a-6">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-a-7">Description&#8595;</div>
+
+          <div class="descr-button" id="button-descr-c-1">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-c-2">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-c-3">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-c-4">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-c-5">Description&#8595;</div>
+          <div class="descr-button" id="button-descr-c-6">Description&#8595;</div>
+</div>
+
+
+<div class="box_right"><div class="descr-button" id="back-menu">BACK</div></div>
+
+<!-- HEADERS-ver -->
+<div class="box_top_1">
+  <div class="about"><div class="top-links">Autonomous&#8595;</div></div>
+</div>
+<div class="box_top_2">
+  <!-- <div class="about"><div class="top-links">about</div></div> -->
+  <div class="about"><div class="top-links">Commissioned&#8595;</div></div>
+  <!-- <div class="about"><div class="top-links">CV</div></div> -->
+</div>
+
+<div class="box_bottom_1">
+  <div class="about"><div class="top-links" id="social" href="">About&#8593;</div></div>
+  <!-- <div class="about"><a class="top-links" href="mailto:taya@tutamail.com">Short-term</a></div>
+  <div class="about"><a class="top-links" href="mailto:taya@tutamail.com">Commissioned</a></div> -->
+</div>
+
+<div class="box_bottom_2">
+  <div class="about"><a class="top-links" id="social" href="https://www.instagram.com/avgud/">Instagram</a></div>
+  <div class="about"><a class="top-links" id="social" href="https://vimeo.com/user13827812">Vimeo</a></div>
+  <div class="about"><a class="top-links" id="social" href="https://www.facebook.com/alex.avgud">Facebook</a></div>
+</div>
+
+
+<div id="cursor"></div>
+
+<!-- <div class="test">hello bitch</div> -->
+
+<!-- <div class="vl"></div> -->
+
+
+
+
+
+
+
+
+</body>
+</html>
