@@ -158,7 +158,7 @@ img {
   position: absolute;
   color: #FF6700;
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'NeueMontreal-Regular', sans-serif;
   top: 0%;
   width: 100%;
@@ -335,7 +335,7 @@ a {text-decoration: underline; color: #FF6700}
   right: 15px;
   top: 7%;
   color: #FF6700;
-  font-size: 25px;
+  font-size: 40px;
   padding-top: 5px;
   margin: 0px;
 }
