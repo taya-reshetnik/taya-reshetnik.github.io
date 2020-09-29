@@ -1,0 +1,851 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'/>
+  <title>taya reshetnik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='mobile.css'/>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="mobile.css" media="screen"> -->
+  <!-- <link rel="stylesheet" media="screen and (max-device-width: 400px)" href="mobile.css" /> -->
+
+<!-- <script type="text/javascript">
+  if (screen.width <= 400) {
+  document.location = "mobile/mobile.html";
+  }
+</script> -->
+
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+
+
+<!-- SHOW TEXT+IMAGES -->
+<script>
+  $(document).ready(function () {
+
+    $(".project-grid-item").click(function () {
+            $(".image-gallery").css("display", "block");
+      });
+
+    $("#undes").click(function () {
+            $("#text-1").css("display", "block");
+            $("#image-container-1").fadeIn("slow");
+      });
+
+    $("#bur").click(function () {
+            $("#text-2").css("display", "block");
+            $("#image-container-2").fadeIn("slow");
+      });
+    $("#gdgs").click(function () {
+            $("#text-3").css("display", "block");
+            $("#image-container-3").fadeIn("slow");
+      });
+    $("#dp").click(function () {
+            $("#text-4").css("display", "block");
+            $("#image-container-4").fadeIn("slow");
+      });
+    $("#inout").click(function () {
+            $("#text-5").css("display", "block");
+            $("#image-container-5").fadeIn("slow");
+      });
+    $("#eucoh").click(function () {
+            $("#text-6").css("display", "block");
+            $("#image-container-6").fadeIn("slow");
+      });
+    $("#dim").click(function () {
+            $("#text-7").css("display", "block");
+            $("#image-container-7").fadeIn("slow");
+      });
+    $("#cath").click(function () {
+            $("#text-8").css("display", "block");
+            $("#image-container-8").fadeIn("slow");
+      });
+    $("#bdbd").click(function () {
+            $("#text-9").css("display", "block");
+            $("#image-container-9").fadeIn("slow");
+      });
+    $("#perc").click(function () {
+            $("#text-10").css("display", "block");
+            $("#image-container-10").fadeIn("slow");
+      });
+    $("#glob").click(function () {
+            $("#text-11").css("display", "block");
+            $("#image-container-11").fadeIn("slow");
+      });
+    $("#misc").click(function () {
+            $("#text-12").css("display", "block");
+            $("#image-container-12").fadeIn("slow");
+      });
+    $("#let").click(function () {
+            $("#text-13").css("display", "block");
+            $("#image-container-13").fadeIn("slow");
+      });
+    $("#queue").click(function () {
+            $("#text-14").css("display", "block");
+            $("#image-container-14").fadeIn("slow");
+      });
+      $("#synth").click(function () {
+              $("#text-15").css("display", "block");
+              $("#image-container-15").fadeIn("slow");
+        });
+
+        $("#note").click(function () {
+                $("#text-16").css("display", "block");
+                $("#image-container-16").fadeIn("slow");
+          });
+
+        $("#yvonne").click(function () {
+                $("#text-17").css("display", "block");
+                $("#image-container-17").fadeIn("slow");
+          });
+
+          $("#skim").click(function () {
+                  $("#text-18").css("display", "block");
+                  $("#image-container-15").fadeIn("slow");
+            });
+
+          $("#gesture").click(function () {
+                  $("#text-19").css("display", "block");
+                  $("#image-container-19").fadeIn("slow");
+            });
+
+
+            $("#cv_button").click(function () {
+                    $(".hello").css("display", "block");
+                    // $("#hello").css("height", "100%");
+                    // $("#container").css("top", "40%");
+              });
+              $(".close").click(function () {
+                      $(".hello").scrollTop(0);
+                      $(".hello").css("display", "none");
+                });
+});
+
+$(document).ready(function () {
+    var expanded = false;
+    $(".back").click(function () {
+        // var w = $("#drawer-content").width();
+
+        $(".image-container").fadeOut("slow");
+        $(".image-gallery").fadeOut("slow");
+        $(".d-text").fadeOut("slow");
+        // $(".hello").fadeIn("slow");
+        $(".image-container").scrollTop(0);
+        $('iframe').attr('src', $('iframe').attr('src'));
+
+    });
+
+          // $('.back').click(function(){
+          //   $('iframe').attr('src', $('iframe').attr('src'));
+          //   });
+});
+
+</script>
+
+
+</head>
+
+<body>
+
+<!-- MENU CONTAINER -->
+  <div id="container">
+      <div id="myDIV">
+      <div class='project-grid-container'>
+        <div class='project-grid'>
+          <div class='project-grid-item item-1'  id="undes"><img class="menuimg" src="images/undes/img_03.png">         <div class="titel">THE UNDESIRABLES</div></div>
+          <div class='project-grid-item item-6'  id="eucoh"><img class="menuimg" src="images/eucoh/book_13.jpg">        <div class="titel">&nbsp;EU COHERENCE</div></div>
+          <div class='project-grid-item item-13' id="let">  <img class="menuimg" src="images/let/poster_01_02.png">     <div class="titel">&nbsp;LET ME TELL YOU ABOUT...</div></div>
+          <div class='project-grid-item item-19' id="gesture"><img class="menuimg" src="images/gesture/PP_grad_14.jpg"> <div class="titel">&nbsp;GESTURE</div></div>
+          <div class='project-grid-item item-15' id="synth"><img class="menuimg" src="images/synth/synth_2.1.jpg">      <div class="titel">&nbsp;SYNTHESIS: About Forms, Lines & Feelings</div></div>
+          <div class='project-grid-item item-16' id="note"><img class="menuimg" src="images/notations/notations_01.png"><div class="titel">&nbsp;NOTATIONS</div></div>
+          <div class='project-grid-item item-17' id="yvonne"><img class="menuimg" src="images/yvonne/img_01.png">       <div class="titel">&nbsp;87 Days</div></div>
+          <div class='project-grid-item item-14' id="queue"><img class="menuimg" src="images/queue/queue_04.jpg">       <div class="titel">&nbsp;PATTERNS</div></div>
+          <div class='project-grid-item item-2'  id="bur">  <img class="menuimg" src="images/bur/v_01.png">             <div class="titel">&nbsp;BUREAUCRACY COMPLEX</div></div>
+          <div class='project-grid-item item-3'  id="gdgs"> <img class="menuimg" src="images/gdgs/poster_1.png"><div class="titel">&nbsp;GRAPHIC DESIGN GRADUATION SHOW 2018</div></div>
+          <div class='project-grid-item item-4'  id="dp">   <img class="menuimg" src="images/dp/1.1.png"><div class="titel">&nbsp;DOG & PONY SHOW</div></div>
+          <div class='project-grid-item item-5'  id="inout"><img class="menuimg" src="images/inout/2.jpg"><div class="titel">&nbsp;INSIDE/OUT</div></div>
+          <div class='project-grid-item item-7'  id="dim">  <img class="menuimg" src="images/dim/dim_03.jpg"><div class="titel">&nbsp;4TH DIMENSION</div></div>
+          <div class='project-grid-item item-8'  id="cath"> <img class="menuimg" src="images/cath/cover_bw.png"><div class="titel">&nbsp;CATHEDRAL OF A NEW ERA</div></div>
+          <div class='project-grid-item item-9'  id="bdbd"> <img class="menuimg" src="images/bdbd/BY5A9102.png"><div class="titel">&nbsp;STUDENT JURY SELECTION. BEST DUTCH BOOK DESIGNS 2016</div></div>
+          <div class='project-grid-item item-10' id="perc"> <img class="menuimg" src="images/perc/objects_expo6.jpg"><div class="titel">&nbsp;52.083967, 4.239759</div></div>
+          <div class='project-grid-item item-11' id="glob"> <img class="menuimg" src="images/glob/3.jpg"><div class="titel">&nbsp;GLOBALIZING INTIMACY</div></div>
+          <div class='project-grid-item item-12' id="misc"> <img class="menuimg" src="images/misc/miscon_1.jpg"><div class="titel">&nbsp;MISCONNECTION</div></div>
+        </div>
+      </div>
+      </div>
+
+</div>
+
+
+      <div class="hello">
+          <div>
+             As a designer I have an affinity with architectural structures and building narratives. The subjects of the stories I investigate are often 'hidden' in plain sight. Through visual research and making connections I am aiming to get a better understanding of the multilayered social and political situations. In my projects I lean on research-based approach which becomes the starting point for the choice of the medium. Projects may vary from publications to interactive installations and video.<br><br>
+           </div>
+                  <div class="header">Exhibitions</div>
+                    <a class="expo" href="https://whospeaks.eu/">Who Speaks?/ online (2020);</a><br>
+                    <a class="expo" href="http://2018.manifestations.nl/en/portfolio/taisiia-reshetnik-the-undesirables/">Manifestations, Dutch Design Week/ Veemgebouw, Eindhoven (20 OCT&mdash;28 OCT 2018);</a><br>
+                    <a class="expo" href="http://www.gd18.care/">Graphic Design Graduation Show'18/ Royal Academy of Art (06 JUL&mdash;12 JUN 2018);</a><br>
+                    <a class="expo" href="https://www.meermanno.nl/declaring-reason/">Declaring Reason/ Museum Meermanno<br> (3 Jun&mdash;24 SEPT 2017);</a><br>
+                    Best Dutch Book Designs 2016/ Stedelijk Museum, Amsterdam (28 SEPT&mdash;28 OCT 2017);<br>
+                    <a class="expo" href="https://www.facebook.com/events/sexy-times-at-sexyland/151312638685569/">Sexy Times/ Sociëteit SEXYLAND, Amsterdam<br> (14&mdash;15 OCT 2017);</a><br>
+                    <a class="expo" href="https://waag.org/en/project/borderless-states">Borderless States/ De Waag, Amsterdam (22 DEC 2016);</a><br>
+                    We Are the Band #2/ Dokzaal, Amsterdam, (JUN 2016);<br>
+                    Moving Cities, Moving Type/ Fokker Terminal<br> (OCT 2017);<br>
+                    Global Imaginations Revisited (2016)<br><br>
+                          <div class="header">Talks</div>
+                            Open Day/ Royal Academy of Art (2019);<br>
+                            <a class="expo" href="https://thehmm.nl/the-hmm-het-nieuwe-instituut-thur-may-24-at-2000/">The Hmm/ Het Nieuwe Instituut (24 MAY 28 OCT 2018);</a>
+                                Pairing Session at the Design Curating and Writing MA, Eindhoven Design Academy (16 JAN 2019);<br>
+                                Open Day/ Royal Academy of Art (2016)<br><br>
+                                            <div class="header">Education</div>
+                                                 Non Linear Narrative MA at Royal Academy of Arts,<br>the Hague 2019&mdash;2021;<br>
+                                                 Graphic Design BA at Royal Academy of Arts,<br>the Hague 2014&mdash;2018;<br>
+                                                 Graphic Design BA at St-Petersburg State University<br>of Technology and Design 2009&mdash;2013<br><br>
+                                                          <div class="header">Internship + Jobs</div>
+                                                            Founder of studio2992.nl (2020-currently);<br>
+                                                            Trainee and junior graphic designer at Kossmanndejong (MAR2019&mdash;AUG2020);<br>
+                                                            Internship at Studio Kummer&Herrman, Utrecht<br>(JUL&mdash;OCT 2017)<br>
+                  <div class="close"><span>&#10005;</span></div><br>
+          </div>
+
+
+
+
+
+        <div class="about-container">
+          <div class="contact"><a class="top-links" id="cv_button">About/Exhibitions/CV</a></div>
+          <div class="contact"><a class="top-links" href="mailto:info@taya-reshetnik.nl">e-mail</a></div>
+          <div class="contact"><a class="top-links" href="https://www.instagram.com/taya.reshetnik/">Instagram</a></div>
+          <div class="contact"><a class="top-links" href="https://www.linkedin.com/in/taya-reshetnik/">LinkedIn</a></div>
+          <div class="contact"><a class="top-links" href="https://vimeo.com/tayareshetnik">Vimeo</a></div>
+        </div>
+
+
+
+
+
+
+<!-- IMAGES -->
+<div class="image-gallery">
+
+    <div class="image-container" id="image-container-1">
+      <!-- <div class="note">description<br>&darr;</div> -->
+      <div class="image-undes" id="undes-img-3"><img src="images/undes/img_03.png"></div>
+      <div class="image-undes" id="undes-img-3"><img src="images/undes/img_02.png"></div>
+      <div class="image-undes" id="undes-img-3"><img src="images/undes/img_01.png"></div>
+      <div class="image-undes" id="undes-img-3"><img src="images/undes/instal_01.jpg"></div>
+      <div class="image-undes" id="undes-img-3"><img src="images/undes/instal_02.jpg"></div>
+      <div class="image-undes" id="undes-img-3"><img src="images/undes/instal_03.png"></div>
+      <div class="image-undes" id="undes-img-3"><img src="images/undes/instal_04.jpg"></div>
+      <iframe src="https://player.vimeo.com/video/282894328" width="400" height="150" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br>
+        <div class="back"><span>&#10005;</span></div><br>
+            <div class="d-text" id="text-1">
+                THE UNDESIRABLES<br><br>
+                <i>The Undesirables</i> is a story about the resistance between the Station and the unwanted
+                spirits which has been going on for almost 200 years. It is based on the historical research
+                of the Utrecht Central Station from the moment of its creation in 1843, when it was built on
+                the place of a small cemetery for criminals.<br><br>
+                <i>The Undesirables</i> is a metaphor, used to show how privatisation and securitisation of
+                public spaces change their political meaning and turn them into ‘non-places’,
+                where the entrance is not by right, but by permission. They have a departicularized
+                character, that looks very much alike and pretends to be public. On one hand current
+                solution (‘supervision and enforcement’) is aiming to make the urban environment safe,
+                but on the other, it’s turning it into a space of increasing discrimination, where every
+                individual is treated as a customer and at the same time–potential criminal.<br><br>
+                Video installation consists of main projection, supported by a voiceover and two small
+                screens. The main video displays a partially fictional narrative, following the timeline
+                of real events. The scaffolding skeleton, which holds the 3-dimentional collage, combining
+                images of architecture of the station from different periods of time, capture a building
+                in constant flux, creating a landscape of failed attempts to resist the undesirables.<br><br>
+                The two additional small screens show archival images and real facts, on which the story
+                is based on.<br><br>
+              <div class="d-text-extra">
+                video + sound installation. 10 min.<br><br>
+                EXHIBITED AT:<br>
+                <a class="d-links" href="http://2018.manifestations.nl/en/portfolio/taisiia-reshetnik-the-undesirables/">Manifestations, Dutch Design Week/ Veemgebouw, <br>Eindhoven (20 OCT&mdash;28 OCT 2018)<br>
+                <a class="d-links" href="http://www.gd18.care/">Graphic Design Graduation Show 2018/
+                Royal Academy of Art, <br>The Hague (06 JUL&mdash;12 JUN 2018)</a><br><br>
+                Graphic Design Department Award <br><br>
+                SUPERVISED BY:<br>
+                Thomas Buxó<br>
+                Agata Jaworska<br>
+                Roosje Klap<br>
+                Niels Schrader<br><br>
+                CREDITS:<br>
+                Jan Egbers<br>
+                Leith Benkhedda<br>
+                Ruben Pater<br>
+                Ernie Mellegers<br>
+                Kevin Bray<br>
+                Jakob Schlötter<br><br>
+                Arjan den Boer<br>
+                Agnes Algera<br>
+                Jan-Willem Oudhof<br>
+                Maša Galič<br><br><br></div>
+          </div>
+  </div>
+
+    <div class="image-container" id="image-container-2">
+      <div class="back"><span>&#10005;</span></div><br>
+      <div class="image-bur" id="bur-img-1"><img src="images/bur/v_01.png"></div>
+      <div class="image-bur" id="bur-img-2"><img src="images/bur/doc_1.png"></div>
+      <div class="image-bur" id="bur-img-2"><img src="images/bur/doc_2.png"></div>
+      <iframe width="400" height="150" autostart="false" src="https://www.youtube.com/embed/55jV1h7qi0k" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="back"><span>&#10005;</span></div><br>
+          <div class="d-text" id="text-2">
+               <!-- <div class="header-d">BUREAUCRACY COMPLEX</div><br> -->
+               BUREAUCRACY COMPLEX<br><br>
+               We live under a system of bureaucratic principles which are extended to
+               every aspect of our existence. What we call "globalization" has nothing to do
+               with the effacement of borders and the free movement of people,
+               products, and ideas, but rather trapping people behind national borders.<br>
+               This project is a model of the world's effective planetary-scale administrative
+               bureaucratic system currently in place.
+               <br><br>
+             <div class="d-text-extra">
+               Video 2min13s<br><br>
+               IN COLLABORATION WITH:<br>
+               <a class="d-links" href="https://www.rebeccarui.com/">Rebecca Rui</a><br><br>
+                SUPERVISED BY:<br>
+                Niels Schrader<br>
+                Lauren Alexander<br><br>
+                EXHIBITED AT:<br>
+                <a class="d-links" href="https://waag.org/en/project/borderless-states">Borderless States/ De Waag, Amsterdam (22 DEC 2016)</a><br>
+                Open Day/ Royal Academy Of Art, the Hague (28 JAN 2017)<br><br></div>
+          </div>
+    </div>
+
+    <div class="image-container" id="image-container-3">
+      <div class="image-gdgs" id="gdgs-img-1"><img src="images/gdgs/fb_banner.png"></div>
+      <div class="image-gdgs" id="gdgs-img-2"><img src="images/gdgs/group.png"></div>
+      <div class="image-gdgs" id="gdgs-img-3"><img src="images/gdgs/poster_1.png"></div>
+      <div class="image-gdgs" id="gdgs-img-4"><img src="images/gdgs/poster_2.png"></div>
+      <div class="image-gdgs" id="gdgs-img-5"><img src="images/gdgs/web_01.png"></div>
+      <div class="image-gdgs" id="gdgs-img-5"><img src="images/gdgs/web_02.png"></div>
+      <div class="image-gdgs" id="gdgs-img-6"><img src="images/gdgs/pattern_1.1.png"></div>
+      <div class="image-gdgs" id="gdgs-img-7"><img src="images/gdgs/pattern_2.1.png"></div>
+      <video width="625" height="345" autostart="false" controls="controls"><source src="images/gdgs/720_px.mp4"></video>
+        <div class="back"><span>&#10005;</span></div><br>
+          <div class="d-text" id="text-3">
+                  GRAPHIC DESIGN GRADUATION SHOW 2018<br><br>
+                  Cleansed, peeled, liberated.<br>The Graphic Design Class of 2018 is
+                  leaving and is saying their goodbyes, but not before commenting on the
+                  state of affairs one last time. Surrounded by pre-packaged, fast-food-visual-language,
+                  authenticity is hard to come by. It becomes slippery like a piece of scented soap.
+                  Trends, styles, templates, groups, collectives. Rigidity. So not yoga.
+                  Who knew creativity could be valorized? Where’s the inner peace at, that
+                  sense of belonging? On the path to subjectivity one-size-fits-none.
+                  What you need is some you-time. We have to re-make and unmake ourselves.
+                  Time to actualise! This is supposed to be a cleansing of sorts.<br>
+                  A ritual. Or is it an exorcism?<br><br>
+                <div class="d-text-extra">
+                  <a href="http://gd18.care/">website >>></a><br><br>
+                  IN COLLABORATION WITH:<br>
+                  <a class="d-links" href="http://asuk.work/">Asya Sukhorukova</a><br>
+                  <a class="d-links" href="http://lukasengelhardt.net/work/">Lukas Engelhart</a><br>
+                  <a class="d-links" href="http://carmendusmet.com/">Carmen Dusmet Carasco</a><br>
+                  <a class="d-links" href="http://www.norabekes.nl/">Nora Bekes</a><br>
+                  <a class="d-links" href="http://www.linven.nl/">Lin Ven</a><br>
+                  <a class="d-links" href="http://jonathanhielkema.nl">Photography by: EKOC Productions</a><br><br>
+                  SUPERVISED BY:<br>
+                  Roosje Klap<br>
+                  Agata Jaworska<br>
+                  Ewoud Traast<br><br></div>
+          </div>
+    </div>
+
+    <div class="image-container" id="image-container-4">
+          <div class="image-dp" id="dp-img-1"><img src="images/dp/1.1.png"></div>
+          <div class="image-dp" id="dp-img-2"><img src="images/dp/insta_01.png"></div>
+          <div class="image-dp" id="dp-img-2"><img src="images/dp/insta_02.png"></div>
+          <div class="image-dp" id="dp-img-2"><img src="images/dp/3.jpg"></div>
+          <div class="image-dp" id="dp-img-2"><img class="ver" src="images/dp/10.1.jpg"></div>
+          <div class="image-dp" id="dp-img-2"><img class="ver" src="images/dp/10.2.jpg"></div>
+          <video id="myvideo" width="400" height="150" controls autoplay><source src="images/dp/dopo.mp4"></video><script> document.getElementById('myvideo').play();</script>
+            <div class="back"><span>&#10005;</span></div><br>
+                <div class="d-text" id="text-4">
+                        DOG & PONY SHOW<br><br>
+                        Identity for the annual Dog&Pony Show,
+                        presentation of first graduation project ideas by Graphic Design students at KABK.<br>
+                        35 students, 3.33 minutes and 20 slides each.
+                        <br><br>
+                      <div class="d-text-extra">
+                        Silkscreen print on matt, glossy paper and fabric.<br><br>
+                        IN COLLABORATION WITH:<br>
+                        <a class="d-links" href="http://asuk.work/">Asya Sukhorukova</a><br><br><br>
+                        SUPERVISED BY:<br>
+                        Michel Hoogervorst<br><br>
+                        <div><img id="prince" src="images/dp/little-prince-snake-hat.jpg"></div></div>
+                </div>
+    </div>
+
+    <div class="image-container" id="image-container-5">
+      <div class="image-inout" id="inout-img-1"><img src="images/inout/1.jpg"></div>
+      <div class="image-inout" id="inout-img-2"><img src="images/inout/2.jpg"></div>
+      <div class="image-inout" id="inout-img-2"><img src="images/inout/inout_print_1.1.png"></div>
+      <div class="image-inout" id="inout-img-2"><img src="images/inout/inout_print_1.2.png"></div>
+      <div class="image-inout" id="inout-img-2"><img src="images/inout/inout_print_1.3.png"></div>
+      <div class="image-inout" id="inout-img-2"><img src="images/inout/inout_print_1.4.png"></div>
+      <div class="image-inout" id="inout-img-2"><img src="images/inout/inout_print_1.5.png"></div>
+      <div class="image-inout" id="inout-img-2"><img src="images/inout/inout_print_1.6.png"></div>
+      <iframe src="https://player.vimeo.com/video/293524118" width="400" height="150" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <div class="back"><span>&#10005;</span></div><br>
+          <div class="d-text" id="text-5">
+                  INSIDE/OUT<br><br>
+                  <i>Inside/Out</i> is a series of works for the exhibition <i>Sexy Times</i> which
+                  includes a booklet, poem and an installation.<br><br>
+                  The booklet is an associative collage, forming a narrative about the
+                  <i>inner</i> egoistic self and the <i>outer</i> other, about the relationship between the two.<br><br>
+                  The interactive installation is a continuation of the same narrative, brought into the
+                  physical 3-dimensional space.<br>
+                  In order to activate the installation two individuals have to make a physical contact.<br><br>
+                  'Exhibition and party by graphic design students of the Royal Academy of Arts, The Hague (KABK) at the new society for the arts in Amsterdam: SEXYLAND!
+                  From Foucault to Beyoncé, mankind has long harbored an obsession with sexuality and the psychological mechanics surrounding them.
+                  Lust is such an individual experience that it gives free range to creatives looking to produce something erotic, playing as they can with personal predilections,
+                  implicit and/or explicit ideas about what do we see, or rather: what do we want to see?<br>
+                  With PlayLab, an elective at the Royal Academy of Arts The Hague, focusing on artistic research, we examined a series of subjects around the topic of
+                  sexuality and our shifting relationship by asserting new attitudes and perspectives towards sex. The stories that are written
+                  challenge traditional visions and divisions between humans, nature and technology'.
+                  <br><br>
+                <div class="d-text-extra">
+                  Publication: risoprint<br>
+                  Installation: Arduino + processing<br><br>
+                  CONCEPT, DESIGN, POETRY, VIDEO EDITING:<br>
+                  Taya Reshetnik<br>
+                  Raphaël Maman<br><br>
+                  FILMING:<br>
+                  <a class="d-links" href="http://jonathanhielkema.nl/">Jonathan Hielkema</a><br><br>
+                  SOUND:
+                  <a class="d-links" href="http://www.jaapsmit.nl/">Jaap Smit</a>
+                  <a class="d-links" href="https://soundcloud.com/jaap_smit">+soundcloud</a><br><br>
+                  SPECIAL THANKS TO:<br>
+                  <a class="d-links" href="https://www.youtube.com/channel/UCafxR2HWJRmMfSdyZXvZMTw">LOOK MUM NO COMPUTER</a><br>
+                  <a class="d-links" href="https://www.rebeccarui.com/">Rebecca Rui</a><br><br>
+                  SUPERVISED BY:<br>
+                  Kees van Drongelen<br>
+                  Roosje Klap<br>
+                  Job Wouters<br>
+                  Christien Bax<br><br>
+                  EXHIBITED AT:<br>
+                  <a class="d-links" href="https://www.facebook.com/events/sexy-times-at-sexyland/151312638685569/">Sexy Times/ Sociëteit SEXYLAND, Amsterdam (14&mdash;15 OCT 2017)</a><br>
+                  Open Day/ Royal Academy Of Art, the Hague (28 JAN 2017)</div>
+          </div>
+    </div>
+
+    <div class="image-container" id="image-container-6">
+      <div class="image-eucoh" id="eucoh-img-1"><img src="images/eucoh/instal_1.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-2"><img src="images/eucoh/book_01.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-3"><img src="images/eucoh/book_02.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-4"><img src="images/eucoh/book_03.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-5"><img src="images/eucoh/book_04.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-6"><img src="images/eucoh/book_05.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-7"><img src="images/eucoh/book_06.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-8"><img src="images/eucoh/book_07.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-9"><img src="images/eucoh/book_08.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-10"><img src="images/eucoh/book_09.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-11"><img src="images/eucoh/book_10.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-12"><img src="images/eucoh/book_11.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-13"><img src="images/eucoh/book_12.jpg"></div>
+      <div class="image-eucoh" id="eucoh-img-14"><img src="images/eucoh/instal_2.jpg"></div>
+        <div class="back"><span>&#10005;</span></div><br>
+          <div class="d-text" id="text-6">
+                  EU COHERENCE<br><br>
+                  Within the modern concept of citizenship it is hard to
+                  bind any principle, belief or value to a nationwide characteristic.
+                  However, constitution is still a perfect example of such a relation.
+                  'The global city has been deemed the birthplace of a post-national or
+                  cosmopolitan conception of citizenship, formed around human rights and
+                  regimes and exercised across state-borders'.* If so, then we have to reconsider
+                  what the identity is based on, and mind how and by what means we are being
+                  represented. In the context of moving towards the new global citizenship, where
+                  all sorts of nation based distinctions are slowly being merged,
+                  or even erased, we have to bring up to the surface what lays in the ground of our
+                  diversity, BUT not in order to differentiate.<br>
+                  <i>EU Coherence</i> presents alternative identities, derived from constitutions,
+                  for the countries of the European Uniion. These identities take form of flags. The result
+                  of our investigation turns into a publication, containing all the visualized comparisons
+                  of constitutions:<br>
+                  &mdash;Structure (How complex is the organisation of information?).<br>
+                  &mdash;First Article (What is the 'face' of the constitution?).<br>
+                  &mdash;Timeline (When was it released?<br>
+                  &mdash;When did the amendments take place?<br>
+                  &mdash;What was the historical context?<br>
+                  &mdash;Language (What are the most frequent words used?).<br>
+                  &mdash;Number of Articles/Pages (How elaborate is the content?).<br>
+                  &mdash;Priorities (To which issues is the priority given?).<br><br>
+                <div class="d-text-extra">
+                  *'Global cities, (un)rooted lives: Towards a trans-scalar conception of citizenship'
+                  by Monica Brito Vieira and Flippe Carreira da Silva.<br><br>
+                  Book 247p, print on fabric.<br><br>
+                  IN COLLABORATION WITH:<br>
+                  <a class="d-links" href="http://theresascherrer.eu/">Theresa Scherrer</a><br><br>
+                  EXHIBITED AT:<br>
+                  <a class="d-links" href="https://www.meermanno.nl/declaring-reason/">Declaring Reason/ Museum Meermanno, The Hague (3 Jun&mdash;24 SEPT 2017)</a><br>
+                  <a class="d-links" href="https://leadersinformed.nl/events/a-public-purpose-leaders-retreat-2018/">Leaders Retreat'18:'A Public Purpose'/ Nieuwe Kerk, The Hague (8 FEB 2018)</a><br><br>
+                  SUPERVISED BY:<br>
+                  Niels Schrader<br>
+                  Lauren Alexander<br></div>
+                </div>
+    </div>
+
+    <div class="image-container" id="image-container-7">
+      <div class="image-dim" id="dim-img-1"><img src="images/dim/dim_g_2.gif"></div>
+      <div class="image-dim" id="dim-img-2"><img src="images/dim/dim_01.jpg"></div>
+      <div class="image-dim" id="dim-img-3"><img src="images/dim/dim_03.jpg"></div>
+      <div class="image-dim" id="dim-img-4"><img src="images/dim/dim_02.jpg"></div>
+        <div class="back"><span>&#10005;</span></div><br>
+            <div class="d-text" id="text-7">
+                    <div class="back"><span>&#10005;</span></div><br>
+                    FOURTH DIMENSION<br><br>
+                    The interactive installation is an attempt to understand the idea of
+                    4th dimension through combining projection, sound, touch and space.
+                    <br><br>
+                  <div class="d-text-extra">
+                    Projection on fabric, Processing, Kinect<br><br>
+                    SUPERVISED BY:<br>
+                    Jakob Schlötter<br>
+                    Henrik van Leeuwen<br><br></div>
+            </div>
+    </div>
+
+    <div class="image-container" id="image-container-8">
+      <div class="image-cath" id="cath-img-1"><img src="images/cath/cover_bw.png"></div>
+      <div class="image-cath" id="cath-img-2"><img src="images/cath/cover_1.png"></div>
+      <div class="image-cath" id="cath-img-3"><img src="images/cath/cover_2.png"></div>
+      <div class="image-cath" id="cath-img-3"><img src="images/cath/print_1.png"></div>
+      <div class="image-cath" id="cath-img-3"><img src="images/cath/print_2.png"></div>
+      <div class="image-cath" id="cath-img-3"><img src="images/cath/print_3.png"></div>
+      <div class="image-cath" id="cath-img-3"><img src="images/cath/website_1.png"></div>
+      <div class="image-cath" id="cath-img-3"><img src="images/cath/website_2.png"></div>
+        <div class="back"><span>&#10005;</span></div><br>
+            <div class="d-text" id="text-8">
+                    <div class="back"><span>&#10005;</span></div><br>
+                    CATHEDRAL OF A NEW ERA<br><br>
+                    'Societies have always been shaped more by the nature of the media by which men communicate
+                    rather then by the content of the communication'.
+                    Moreover electronic media has a direct physical impact on the way our brain is functioning.
+                    The way we think and perceive information is being changed. And my thesis is focusing on how
+                    these changes are influencing architecture and urban landscape in particular.<br>
+                    I would like to discern the role of graphic design in architecture and to point out the spheres
+                    where it is playing a key role. Graphic design is commonly being considered as a 2-dimensional practice,
+                    resulting in print or a digital product. However I see a strong connection in how its influence
+                    spreading further, on a larger scale of architecture and urban planning.<br>
+                    My central assumption within this thesis is that media is forming the perception and ways of thinking which
+                    leads to changes in how we approach urban planning and architecture. And since graphic design is responsible
+                    for communication and translation of information into a visual message, it stands behind that influence as well.
+                    I want to point out that the influence of graphic design goes out of the 2D canvas and has a wider, tangible affect.<br>
+                    Observation and personal experience of travelling through Utrecht Central during my internship
+                    for the period of 3 months became the starting point of this research.<br><br>
+                    <a href="https://kabk.github.io/go-theses-18-taya-reshetnik-cathedral-of-a-new-era/">Thesis Website >>></a>
+                    <br><br>
+                  <div class="d-text-extra">
+                    Thesis website + generative print + silkscreened cover<br><br>
+                    SUPERVISED BY:<br>
+                    Dirk Vis<br>
+                    Matthias Kreutzer<br>
+                    Eric Schrijver<br><br></div>
+            </div>
+    </div>
+
+    <div class="image-container" id="image-container-9">
+      <div class="image-bdbd" id="bdbd-img-1"><img src="images/bdbd/BY5A8746.png"></div>
+      <div class="image-bdbd" id="bdbd-img-9"><img src="images/bdbd/zoom_1.png"></div>
+      <div class="image-bdbd" id="bdbd-img-2"><img src="images/bdbd/BY5A8750.png"></div>
+      <div class="image-bdbd" id="bdbd-img-3"><img src="images/bdbd/BY5A8752.png"></div>
+      <div class="image-bdbd" id="bdbd-img-4"><img src="images/bdbd/BY5A8753.png"></div>
+      <div class="image-bdbd" id="bdbd-img-5"><img src="images/bdbd/BY5A8757.png"></div>
+      <div class="image-bdbd" id="bdbd-img-6"><img src="images/bdbd/BY5A8760.png"></div>
+      <div class="image-bdbd" id="bdbd-img-7"><img src="images/bdbd/BY5A9102.png"></div>
+      <div class="image-bdbd" id="bdbd-img-8"><img src="images/bdbd/BY5A9118.png"></div>
+      <div class="image-bdbd" id="bdbd-img-9"><img src="images/bdbd/BY5A9234.png"></div>
+        <div class="back"><span>&#10005;</span></div><br>
+            <div class="d-text" id="text-9">
+                    <div class="back"><span>&#10005;</span></div><br>
+                    BEST DUTCH BOOK DESIGNS 2016, Student Catalogue<br><br>
+                    The design of this catalogue is a reflection on the selection made
+                    by the student jury. Looking at the chosen books,
+                    a certain pattern appears: a book isn't just a source of information,
+                    but an object. With it's image-based editorial approach, tactility, choice of paper,
+                    typography and final presentation, the selection of 2016 tells a lot about how
+                    our perception of printed matter is being influenced by the electronic media.
+                    <br><br>
+                  <div class="d-text-extra">
+                    Offset print, edition of 250<br><br>
+                    EXHIBITED AT:<br>
+                    Best Dutch Book Designs 2016/ Stedelijk Museum,<br>Amsterdam (28 SEPT&mdash;28 OCT 2017)<br><br>
+                    IN COLLABORATION WITH:<br>
+                    <a class="d-links" href="https://daankars.com/">Daan Jesper Kars</a><br>
+                    <a class="d-links" href="http://danielh.info/">Daniel Hernández</a><br><br>
+                    SUPERVISED BY:<br>
+                    Chantal Hendriksen<br>
+                    Gijsbert Dijker<br><br>
+                    SPONSORED BY:<br>
+                    <a class="d-links" href="http://drukkerijtielen.nl/">Drukkerij Tielen</a><br></div>
+            </div>
+    </div>
+
+    <div class="image-container" id="image-container-10">
+      <div class="image-perc" id="perc-img-1"><img src="images/perc/objects_spread1.jpg"></div>
+      <div class="image-perc" id="perc-img-2"><img src="images/perc/objects_spread2.jpg"></div>
+      <div class="image-perc" id="perc-img-3"><img src="images/perc/objects_spread3.jpg"></div>
+      <div class="image-perc" id="perc-img-3"><img src="images/perc/objects_spread4.jpg"></div>
+      <div class="image-perc" id="perc-img-3"><img src="images/perc/objects.gif"></div>
+      <div class="image-perc" id="perc-img-3"><img src="images/perc/objects_spread.jpg"></div>
+      <div class="image-perc" id="perc-img-3"><img src="images/perc/objects_expo2.jpg"></div>
+      <div class="image-perc" id="perc-img-3"><img src="images/perc/objects_expo4.jpg"></div>
+      <div class="image-perc" id="perc-img-3"><img src="images/perc/objects_expo5.jpg"></div>
+      <div class="image-perc" id="perc-img-3"><img src="images/perc/objects_expo6.jpg"></div>
+      <div class="image-perc" id="perc-img-3"><img src="images/perc/objects_expo7.jpg"></div>
+        <div class="back"><span>&#10005;</span></div><br>
+            <div class="d-text" id="text-10">
+                    52.083967, 4.239759<br><br>
+                    Project <i>52.083967, 4.239759</i> is centered around the idea of impossibility
+                    of absolute understanding between people, which in my opinion is&mdash;interpretation.
+                    Reffering to deconstruction theories, John Berger's ideas of mystification this
+                    project is displaying the individual intuitive 'paths' of interpretation as an example, revealing
+                    one particular way of seeing.<br>
+                    10 objects were taken out of the initial context and interpreted in 10 different ways:
+                    &mdash;photograph in the initial context ( location coordinates: <i>52.083967, 4.239759</i>),<br>
+                    &mdash;photograph out of the context,<br>
+                    &mdash;pencil drawing,<br>
+                    &mdash;word description,<br>
+                    &mdash;3 associative words,<br>
+                    &mdash;3 google images for assosiative words,<br>
+                    &mdash;'re-made' initial objects,<br>
+                    &mdash;'re-made' initial objects, experiments with light,<br>
+                    &mdash;interpretation of objects in a different material,<br>
+                    &mdash;sound enterpretation.<br>
+                    The end result turned into an installation,
+                    where all the representations were being displayed together in one space, supported
+                    by sound interpretation.<br>
+                    <i>52.083967, 4.239759</i> is an attempt to understand and to explore a
+                    fragile intuitive process of communication, full of multilayered connections.
+                    <br><br>
+                  <div class="d-text-extra">
+                    Print, various materials<br><br>
+                    EXHIBITED AT:<br>
+                    Global Imaginations Revisited (///&mdash;///)<br><br>
+                    SUPERVISED BY:<br>
+                    Michel Hoogervorst<br>
+                    Marjan Brandsma<br><br></div>
+            </div>
+    </div>
+
+    <div class="image-container" id="image-container-11">
+      <div class="image-glob" id="glob-img-1"><img src="images/glob/intimacy.gif"></div>
+      <div class="image-glob" id="glob-img-9"><img src="images/glob/3.jpg"></div>
+      <div class="image-glob" id="glob-img-9"><img src="images/glob/5.jpg"></div>
+      <div class="image-glob" id="glob-img-9"><img src="images/glob/taya1.jpg"></div>
+      <div class="image-glob" id="glob-img-2"><img src="images/glob/taya2.jpg"></div>
+      <div class="image-glob" id="glob-img-3"><img src="images/glob/intim2.jpg"></div>
+        <div class="back"><span>&#10005;</span></div><br>
+            <div class="d-text" id="text-11">
+                    <div class="back"><span>&#10005;</span></div><br>
+                    GLOBALIZING INTIMACY<br><br>
+                    Internet, as a disembodied form of communication often assumed to be impersonal and untrustworthy.
+                    “Globalising intimacy” is an installation, visualising how the absence of physical proximity
+                    can create intimacy. It consists of 2 parts, showing the same personal chat messages on 2 screens
+                    simultaneously. The text becomes readable only when both spectators are looking at it while
+                    standing still. By movement, new messages are being generated.
+                    <br><br>
+                  <div class="d-text-extra">
+                    Print, various materials<br><br>
+                    EXHIBITED AT:<br>
+                    Moving Type, Moving Cities (///&mdash;///)<br><br>
+                    IN COLLABORATION WITH:<br>
+                    <a class="d-links" href="http://www.dorakerekes.info/">Dora Kerekes</a><br><br>
+                    CREDITS:<br>
+                    Edwin Jakobs<br><br>
+                  </div>
+            </div>
+    </div>
+
+    <div class="image-container" id="image-container-12">
+      <div class="image-misc" id="misc-img-1"><img src="images/misc/miscon_1.jpg"></div>
+      <div class="image-misc" id="misc-img-9"><img src="images/misc/miscon_2.jpg"></div>
+      <div class="image-misc" id="misc-img-2"><img src="images/misc/miscon_3.jpg"></div>
+        <div class="back"><span>&#10005;</span></div><br>
+            <div class="d-text" id="text-12">
+                    <div class="back"><span>&#10005;</span></div><br>
+                    MISCONNECTION<br><br>
+                    This alter-ego is a representation of the distortion, inherent to perception,
+                    which sometimes can be used as a defence.
+                    <br><br>
+                  <div class="d-text-extra">
+                    Print, various materials<br><br>
+                    SUPERVISED BY:<br>
+                    Katrin Korfmann<br><br></div>
+            </div>
+    </div>
+
+    <div class="image-container" id="image-container-13">
+      <div class="image-bdbd" id="let-img-1"><img src="images/let/2017.png"></div>
+      <div class="image-bdbd" id="let-img-2"><img src="images/let/poster_01_02.png"></div>
+      <div class="image-bdbd" id="let-img-3"><img src="images/let/st_02.png"></div>
+      <div class="image-bdbd" id="let-img-5"><img src="images/let/IMG_6077.jpeg"></div>
+      <div class="image-bdbd" id="let-img-4"><img src="images/let/st_01.png"></div>
+      <div class="image-bdbd" id="let-img-6"><img src="images/let/IMG_6120.jpeg"></div>
+      <div class="image-bdbd" id="let-img-6"><img src="images/let/insta_spread.png"></div>
+      <video width="400" height="150" controls autostart="false"><source src="images/let/teaser.mp4"></video>
+      <video id="myvideo" width="400" height="150" controls autoplay><source src="images/let/build.mp4"></video><script> document.getElementById('myvideo').play(); </script>
+        <div class="back"><span>&#10005;</span></div><br>
+          <div class="d-text" id="text-13">
+                  LET ME TELL YOU ABOUT...<br><br>
+                  During my internship at Kummer & Herrman we faced a challange of organizing an exhibition for young artists of a third year
+                  Photography Department from The Royal Academy of Art, the Hague at the <i><a href="https://www.kabk.nl/projecten/kabk-x-unseen">Unseen</a></i>. Each of 12 students had their own photographic often based on personal experience
+                  stories to tell. Our main goal was to build a ‘stage’ prominent enough to stand out and attract the audience, but at the same time neutral to some
+                  extent, not interfering with students’ personal vision. We wanted to provide a separate space for each of them to be able to express themselves.
+                  Limitations like the open space (a lot of participants had TV screens and other equipment) set some extra challange for the exhibition design.
+                  Our work resulted in the use of the names of the project as a base for the identity. LET ME TELL YOU ABOUT... would always end with one of the names
+                  of the projects. As part of the promotion for the event a video teaser based on the same principle was made along with a serie of posters, handout,
+                  facebook and other social media banners. Instagram became a platform for the audiotour (@let.me.tell.you.about) and documentation of the exhibition.
+                  <br><br>
+                  Participants:<br>
+                  Nael Quraishi,<br>
+                  Elodie Vreeburg, <br>
+                  Viktor Naumovski, <br>
+                  Katarina Juričić, <br>
+                  Sophie Schwartz, <br>
+                  Caspar von Eugen, <br>
+                  Filippo Maria Ciriani, <br>
+                  Daniela Roșca, <br>
+                  Tibor Dieters, <br>
+                  Avgud, <br>
+                  Stella Loning, <br>
+                  Linnea Frandsen.
+                  <br><br>
+                <div class="d-text-extra">
+                  Exhibition design + identity design<br><br>
+                  SUPERVISED BY:<br>
+                  Jeroen Kummer<br>
+                  Arthur Herrman<br>
+                  Inês da Costa<br><br>
+                  IN COLLABORATION WITH:<br>
+                  <a class="d-links" href="https://mischaappel.com">Mischa Appel</a><br><br></div>
+          </div>
+    </div>
+
+    <div class="image-container" id="image-container-14">
+      <div class="back"><span>&#10005;</span></div><br>
+      <!-- <div class="image-queue" id="queue-img-2"><img src="images/queue/queue_02.jpg"></div> -->
+      <div class="image-queue" id="queue-img-3"><img src="images/queue/queue_03.jpg"></div>
+      <div class="image-queue" id="queue-img-4"><img src="images/queue/queue_04.jpg"></div>
+      <div class="image-queue" id="queue-img-5"><img src="images/queue/queue_05.jpg"></div>
+      <div class="image-queue" id="queue-img-1"><img src="images/queue/queue_01.1.jpg"></div>
+        <div class="back"><span>&#10005;</span></div><br>
+          <div class="d-text" id="text-14">
+                  PATTERNS<br><br>
+                  A serie of silkscreen posters, forming a pattern.
+                  This image is a reflection on the culture of 'queueing', forming a pattern, repeatng throughout the years.
+                  <br><br>
+                <div class="d-text-extra">
+                  Developed during the workshop with Persijn Broersen & Margit Lukács.<br><br>
+                  Silkscreen<br>
+                  2019<br></div>
+          </div>
+    </div>
+
+      <div class="image-container" id="image-container-15">
+        <div class="image-queue" id="synth-img-1"><img src="images/synth/synth_2.1.jpg"></div>
+        <div class="image-queue" id="synth-img-2"><img src="images/synth/synth_2.2.jpg"></div>
+        <div class="image-queue" id="synth-img-3"><img src="images/synth/synth_2.3.jpg"></div>
+        <div class="image-queue" id="synth-img-4"><img src="images/synth/synth_2.4.jpg"></div>
+        <div class="image-queue" id="synth-img-5"><img src="images/synth/synth_2.5.jpg"></div>
+          <div class="back"><span>&#10005;</span></div><br>
+            <div class="d-text" id="text-15">
+                    SYNTHESIS: About Forms, Lines & Feelings<br><br>
+                    <i>Synthesis</i> is a project by a Moscow-based photographer Lora Bergen. Together with two other image-makers we contributed to her
+                    project about movement and time. This serie of collages is my input.<br><br>
+                    The same way as deconstruction is a way of understanding the relationship between text and meaning—collage is
+                    aiming to do the same but through visual means. The intricate, but at the same time intriguing part about this serie,
+                    is its starting point—the black and white photographs capturing an unstable moment during the dance performance,
+                    influencing the uncertain direction from its very beginning. The dance itself is influenced by another ever
+                    changing media–music, at least our perception of it is never fixed. It is creating a chain reaction of unstable events
+                    influencing each other. My contribution—the final step. I broke the ‘chain’ into separate elements and chose those,
+                    which felt necessary for the particular collage: contraforma, draping fabric, skin texture, tension in the muscle. I put
+                    them back together in a different manner. It is my take on reflecting on the whole process. Perhaps looking at these
+                    elements in a rearrangement and a new context will give a new insight.
+                    <br><br>
+                  <div class="d-text-extra">
+                    <a href="https://www.behance.net/gallery/74269391/Synthesis">Synthesis by Lora Bergen (full project)</a><br><br>
+                    Silkscreen<br>
+                    2019<br></div>
+            </div>
+      </div>
+
+      <div class="image-container" id="image-container-16">
+        <div class="image-queue" id="queue-img-1"><img src="images/notations/notations_01.png"></div>
+          <div class="back"><span>&#10005;</span></div><br>
+          <div class="d-text" id="text-16">
+                  NOTATIONS<br><br>
+                  The update is coming soon.
+                  <br><br>
+          </div>
+      </div>
+
+      <div class="image-container" id="image-container-17">
+        <div class="image-queue" id="queue-img-1"><img src="images/yvonne/img_01.png"></div>
+          <div class="back"><span>&#10005;</span></div><br>
+            <div class="d-text" id="text-17">
+                    87 DAYS<br><br>
+                    The update is coming soon.
+                    <br><br>
+            </div>
+      </div>
+
+      <div class="image-container" id="image-container-18">
+        <!-- <div class="image-queue" id="queue-img-1"><img src="images/queue/queue_01.1.jpg"></div> -->
+          <div class="back"><span>&#10005;</span></div><br>
+            <div class="d-text" id="text-18">
+                    I SKIM IT<br><br>
+                    The update is coming soon.
+                    <br><br>
+            </div>
+      </div>
+
+        <div class="image-container" id="image-container-19">
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_14.jpg"></div>
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_05.jpg"></div>
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_06.jpg"></div>
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_07.jpg"></div>
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_08.jpg"></div>
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_09.jpg"></div>
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_10.jpg"></div>
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_11.jpg"></div>
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_12.jpg"></div>
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_13.jpg"></div>
+          <div class="image-queue" id="queue-img-1"><img src="images/gesture/PP_grad_15.jpg"></div>
+            <div class="back"><span>&#10005;</span></div><br>
+              <div class="d-text" id="text-19">
+                      GESTURE<br><br>
+                      The update is coming soon.
+                      <br><br>
+              </div>
+        </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- DESCRIPTION TEXTS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
